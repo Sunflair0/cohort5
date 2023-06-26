@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+
+:root {
+	--primary_link: rgb(0, 181, 239);
+	--secondary_color: rgb(199, 168, 112);
+	--third_color: whitesmoke;
+	--hover: rgb(0, 181, 239);
+	--background1: rgb(141, 91, 53);
+	--background2: rgb(80, 26, 4);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-image: linear-gradient(43deg, var(--background1) 0%,
+			var(--background2) 40%);
+	/* height: 100vh; */
+	color: var(--third_color);
+	text-transform: uppercase;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+section img {
+	height: 7rem;
+
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	padding: 0%;
+	position: relative;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	justify-content: center;
+	margin-top: 15%;
+}
+
+section p {
+	display: flex;
+	position: relative;
+	justify-content: flex-end;
+	font-size: medium;
+	font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+section a:link,
+section a:visited {
+	color: whitesmoke;
+}
+
+.btn {
+	padding: 10px;
+	background: var(--hover);
+	margin: 10rem auto 0;
+	width: 70%;
+	font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
+	font-size: medium;
+
+}
+
+a {
+	border-bottom: transparent solid 2px;
+	border-top: transparent solid 2px;
+	transition: .3s all;
+}
+
+a:link {
+	text-decoration: none;
+	color: gold;
+
+}
+
+a:visited {
+	color: var(--secondary_color);
+}
+
+nav a:hover {
+	color: var(--third_color);
+	padding: 5px 0;
+	border-bottom: var(--hover) solid 2px;
+	border-top: var(--hover) solid 2px;
+}
+
+nav a:active {
+	color: var(--hover);
+}
+
+ul {
+	display: flex;
+	justify-content: space-around;
+	border-bottom: var(--background1) 1px solid;
+	padding: 2rem 0;
+	background: rgba(0, 0, 0);
+	top: 0;
+	width: auto;
+}
+
+nav li {
+	list-style: none;
+}
+
+
+.proj_art {
+	margin-top: 2rem;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.proj_art p {
+	display: flex;
+	justify-content: center;
+	width: 25%;
+}
+
+.star {
+	display: flex;
+	position: relative;
+	clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+	background: repeating-linear-gradient(rgb(96, 6, 87), rgb(234, 83, 136), rgb(96, 6, 87));
+	height: 100px;
+	width: 100px;
+	margin: auto;
+
+}
+
+.star_blink {
+	animation: star 1s linear infinite;
+}
+
+@keyframes star {
+
+	from {
+		rotate: 0deg;
+		opacity: 1;
+
+	}
+
+	to {
+		rotate: 360deg;
+		opacity: 0.5;
+	}
+
+}
+
+.song {
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	margin: auto;
+	margin-top: 9rem;
+	color: aliceblue;
+}
+
+.song img {
+	display: flex;
+	width: 30%;
+	position: relative;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.calendar {
+	width: 90%;
+	margin: auto;
+	height: auto;
+	background-color: rgba(122, 238, 86, 0.229);
+}
+
+.week {
+	display: flex;
+	border: 2px solid black;
+	height: 10vh;
+}
+
+.day_wrapper {
+	display: flex;
+}
+
+.dayname {
+	border: 2px black solid;
+	height: 5vh;
+	width: 14.3%;
+}
+
+.dayname::before {
+	content: attr(dayname);
+	display: flex;
+	font-size: large;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+.day {
+	border: 1px black solid;
+	height: 10vh;
+	width: 14.3%;
+}
+
+.day::before {
+	content: attr(day);
+	display: flex;
+	height: 20px;
+	width: 20px;
+	border: black 1px solid;
+}
+
+.day::after {
+	content: attr(weekend);
+	display: flex;
+	transform: translate(60%, 30%);
+	font-size: clamp(1rem, .5vw, 2rem)
+}
