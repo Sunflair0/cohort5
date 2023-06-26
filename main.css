@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
 
 :root {
-	--primary_link: rgb(0, 181, 239);
+	--primary_link: rgb(0, 133, 177);
 	--secondary_color: rgb(199, 168, 112);
 	--third_color: whitesmoke;
 	--hover: rgb(0, 181, 239);
@@ -16,7 +16,7 @@ html {
 body {
 	background-image: linear-gradient(43deg, var(--background1) 0%,
 			var(--background2) 40%);
-	/* height: 100vh; */
+	height: 100vh;
 	color: var(--third_color);
 	text-transform: uppercase;
 }
@@ -26,6 +26,13 @@ body {
 	padding: 0;
 }
 
+.center {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	justify-self: center;
+}
+
 section img {
 	height: 7rem;
 
@@ -33,7 +40,6 @@ section img {
 
 section {
 	display: flex;
-	flex-direction: column;
 	padding: 0%;
 	position: relative;
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -61,7 +67,12 @@ section a:visited {
 	width: 70%;
 	font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
 	font-size: medium;
+	transition: .3s all;
+}
 
+.btn:hover {
+	border-radius: 20px;
+	background: rgb(2, 121, 218);
 }
 
 a {
@@ -126,41 +137,35 @@ nav li {
 	height: 100px;
 	width: 100px;
 	margin: auto;
-
 }
 
 .star_blink {
-	animation: star 1s linear infinite;
+	animation: star 2s linear infinite;
 }
 
 @keyframes star {
 
 	from {
-		rotate: 0deg;
 		opacity: 1;
+		/* transform: rotate3d(0, 0, 0, 0deg); */
+		rotate: 0deg;
+		;
 
 	}
 
 	to {
-		rotate: 360deg;
 		opacity: 0.5;
+		/* transform: rotate3d(1, 1, 1, 360deg); */
+		rotate: 360deg;
 	}
 
 }
 
 .song {
-	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-	margin: auto;
-	margin-top: 9rem;
+margin: 0 5%;
+	font-family: Arial, Helvetica, sans-serif;
 	color: aliceblue;
-}
-
-.song img {
-	display: flex;
-	width: 30%;
-	position: relative;
-	flex-wrap: wrap;
-	justify-content: center;
+font-weight: 100;
 }
 
 .calendar {
