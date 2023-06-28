@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish&family=Open+Sans&family=Oswald:wght@600&display=swap');
 
 :root {
 	--primary_link: rgb(0, 133, 177);
@@ -13,12 +13,13 @@ html {
 	scroll-behavior: smooth;
 }
 
+
 body {
 	background-image: linear-gradient(43deg, var(--background1) 0%,
 			var(--background2) 40%);
-	height: 100vh;
+
 	color: var(--third_color);
-	text-transform: uppercase;
+
 }
 
 * {
@@ -33,9 +34,9 @@ body {
 	justify-self: center;
 }
 
-section img {
+img {
 	height: 7rem;
-
+	margin: 0 15px;
 }
 
 section {
@@ -75,19 +76,22 @@ section a:visited {
 	background: rgb(2, 121, 218);
 }
 
-a {
+nav {
+	text-transform: uppercase;
+}
+
+nav a {
 	border-bottom: transparent solid 2px;
 	border-top: transparent solid 2px;
 	transition: .3s all;
 }
 
-a:link {
+nav a:link {
 	text-decoration: none;
 	color: gold;
-
 }
 
-a:visited {
+nav a:visited {
 	color: var(--secondary_color);
 }
 
@@ -104,12 +108,15 @@ nav a:active {
 
 ul {
 	display: flex;
+	position: fixed;
 	justify-content: space-around;
 	border-bottom: var(--background1) 1px solid;
 	padding: 2rem 0;
 	background: rgba(0, 0, 0);
 	top: 0;
-	width: auto;
+	width: 100%;
+	box-shadow: 0px 5px 0px 7px var(--background2);
+
 }
 
 nav li {
@@ -162,10 +169,10 @@ nav li {
 }
 
 .song {
-margin: 0 5%;
+	margin: 0 5%;
 	font-family: Arial, Helvetica, sans-serif;
 	color: aliceblue;
-font-weight: 100;
+	font-weight: 100;
 }
 
 .calendar {
@@ -219,4 +226,60 @@ font-weight: 100;
 	display: flex;
 	transform: translate(60%, 30%);
 	font-size: clamp(1rem, .5vw, 2rem)
+}
+
+.trip_box {
+	display: flex;
+	flex-direction: column;
+	font-family: "Mulish", sans-serif;
+	margin: 5rem;
+	line-height: 1.5;
+	font-size: 16px;
+}
+
+.trip {
+	margin-top: 6rem;
+}
+
+.trip p {
+	padding: 1rem;
+}
+
+.trip a:link {
+	font-weight: 400;
+	text-decoration: none;
+	color: var(--primary_link);
+}
+
+.trip a:visited {
+	color: aqua;
+}
+
+.trip img {
+	height: 10rem;
+	float: left;
+}
+
+.trip button {
+	background-color: transparent;
+	color: var(--primary_link);
+	border: none;
+	font-size: 16px;
+	position: relative;
+	bottom: -1px;
+	cursor: pointer;
+}
+
+.video {
+	position: fixed;
+	max-height: 550px;
+	justify-content: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -200%);
+	transition: .3s all;
+}
+
+.video_container {
+	display: flex;
 }
