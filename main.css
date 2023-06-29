@@ -7,6 +7,7 @@
 	--hover: rgb(0, 181, 239);
 	--background1: rgb(141, 91, 53);
 	--background2: rgb(80, 26, 4);
+	--inset_border: rgb(41, 6, 6);
 }
 
 html {
@@ -32,11 +33,6 @@ body {
 	flex-direction: column;
 	position: fixed;
 	justify-self: center;
-}
-
-img {
-	height: 7rem;
-	margin: 0 15px;
 }
 
 section {
@@ -116,7 +112,7 @@ ul {
 	top: 0;
 	width: 100%;
 	box-shadow: 0px 5px 0px 7px var(--background2);
-
+	z-index: 10;
 }
 
 nav li {
@@ -238,11 +234,12 @@ nav li {
 }
 
 .trip {
-	margin-top: 6rem;
+	margin: 6rem 0 3rem;
+	z-index: 1;
 }
 
 .trip p {
-	padding: 1rem;
+	padding: 0 1rem;
 }
 
 .trip a:link {
@@ -255,11 +252,6 @@ nav li {
 	color: aqua;
 }
 
-.trip img {
-	height: 10rem;
-	float: left;
-}
-
 .trip button {
 	background-color: transparent;
 	color: var(--primary_link);
@@ -268,6 +260,7 @@ nav li {
 	position: relative;
 	bottom: -1px;
 	cursor: pointer;
+	z-index: 0;
 }
 
 .video {
@@ -278,8 +271,122 @@ nav li {
 	left: 50%;
 	transform: translate(-50%, -200%);
 	transition: .3s all;
+	z-index: 1;
 }
 
-.video_container {
+.inset_shadow {
+	border-radius: 10px;
+	border: 1px solid var(--inset_border);
+	margin: 0 15px;
 	display: flex;
+	position: relative;
+	margin: 0 -15px;
+	padding: 0;
+	box-shadow:
+		8px 8px 5px rgba(0, 0, 0, 0.85),
+		0px 0px 20px 10px rgba(27, 1, 1, 0.65) inset;
+	background-size: cover;
+	background-position: center;
+}
+
+
+.imgBlock {
+	display: flex;
+	justify-content: space-between;
+	width: 50%;
+	float: right;
+	margin-left: 25%;
+	margin-right: -12%;
+}
+
+.textBlock {
+	display: flex;
+	margin-top: 10%;
+}
+
+.pic1 {
+	background-image: url(/assets/aimMez.jpg);
+	height: 20rem;
+	aspect-ratio: 1;
+	float: left;
+	margin-right: 20px;
+}
+
+.pic2 {
+	background-image: url(/assets/lum.jpg);
+	height: 15rem;
+	max-width: 400px;
+	margin-top: -5rem;
+	rotate: 12deg;
+	aspect-ratio: 3/2;
+}
+
+.pic2a {
+	background-image: url(/assets/game.jpg);
+	background-position: left;
+	height: 15rem;
+	max-width: 340px;
+	width: 60%;
+	margin-top: 6rem;
+	right: 30rem;
+	rotate: -5deg;
+	aspect-ratio: 1;
+}
+
+.pic3 {
+	background-image: url(/assets/uno.png);
+	height: 15rem;
+	max-width: 340px;
+	width: 60%;
+	margin-top: 3rem;
+	margin-left: -1rem;
+	rotate: 4deg;
+}
+
+.img3_box {
+display: flex;
+}
+
+.pic3a{
+	background-image: url(/assets/KanekoStudySpace.jpg);
+  height: 11rem;
+    max-width: 200px;
+    margin:  6rem 1rem;
+    right: 3rem;
+    rotate: -3deg;
+background-size: cover;
+    background-repeat: no-repeat;
+	aspect-ratio: 117/89;
+}
+.pic3b{
+	background-image: url(/assets/cpl.jpg);
+    height: 11rem;
+    max-width: 200px;
+    margin:  6rem 1rem;
+    right: 3rem;
+    rotate: 3deg;
+background-size: cover;
+    background-repeat: no-repeat;
+aspect-ratio: 117/89;
+}
+.pic3c{
+	background-image: url(/assets/organ.jpg);
+	    height: 11rem;
+    max-width: 200px;
+     margin:  6.5rem 1rem;
+    right: 3rem;
+rotate: -2deg;
+    background-size: cover;
+    background-repeat: no-repeat;
+    aspect-ratio: 117/89;
+}
+
+.pic4 {
+	background-image: url(/assets/geokey.jpg);
+	height: 15rem;
+	max-width: 340px;
+	width: 60%;
+	margin-top: -3rem;
+	rotate: -5deg;
+float: right;
 }
