@@ -18,58 +18,12 @@ html {
 body {
 	background-image: linear-gradient(43deg, var(--background1) 0%,
 			var(--background2) 40%);
-
 	color: var(--third_color);
-
 }
 
 * {
 	margin: 0;
 	padding: 0;
-}
-
-.center {
-	display: flex;
-	flex-direction: column;
-	position: fixed;
-	justify-self: center;
-}
-
-section {
-	display: flex;
-	padding: 0%;
-	position: relative;
-	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-	justify-content: center;
-	margin-top: 15%;
-}
-
-section p {
-	display: flex;
-	position: relative;
-	justify-content: flex-end;
-	font-size: medium;
-	font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
-}
-
-section a:link,
-section a:visited {
-	color: whitesmoke;
-}
-
-.btn {
-	padding: 10px;
-	background: var(--hover);
-	margin: 10rem auto 0;
-	width: 70%;
-	font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
-	font-size: medium;
-	transition: .3s all;
-}
-
-.btn:hover {
-	border-radius: 20px;
-	background: rgb(2, 121, 218);
 }
 
 nav {
@@ -118,6 +72,71 @@ ul {
 nav li {
 	list-style: none;
 }
+
+.index {
+	display: flex;
+	padding: 0%;
+	position: relative;
+	justify-content: center;
+	margin-top: 15rem;
+}
+
+.index img {
+	height: 5rem;
+}
+
+.index p {
+	display: flex;
+	position: relative;
+	justify-content: flex-end;
+}
+
+.index a:link {
+	text-decoration: none;
+	color: var(--third_color);
+}
+
+.index a:visited {
+	color: black;
+}
+
+.center {
+	display: flex;
+	flex-direction: column;
+	font-size: medium;
+	font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* section {
+	display: flex;
+	padding: 0%;
+	position: relative;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	justify-content: center;
+	margin-top: 15%;
+} */
+
+.projects a:link,
+.projects a:visited {
+	color: whitesmoke;
+}
+
+.btn {
+	padding: 10px;
+	background: var(--hover);
+	margin: 7rem auto 0;
+	width: 70%;
+	font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
+	font-size: medium;
+	transition: .3s all;
+}
+
+.btn:hover {
+	border: black 2px solid;
+	background: var(--third_color)
+}
+
+
 
 
 .proj_art {
