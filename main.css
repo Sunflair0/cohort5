@@ -12,6 +12,7 @@
 
 html {
 	scroll-behavior: smooth;
+	height: 100vh;
 }
 
 
@@ -107,6 +108,12 @@ nav li {
 	font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
 }
 
+#duck {
+display: flex;
+position: relative;
+right: 70%;
+}
+
 /* section {
 	display: flex;
 	padding: 0%;
@@ -116,9 +123,15 @@ nav li {
 	margin-top: 15%;
 } */
 
+.projects {
+	display: flex;
+	justify-content: center;
+	margin: 25vh 2rem 5vh;
+}
+
 .projects a:link,
 .projects a:visited {
-	color: whitesmoke;
+	color: var(--third_color);
 }
 
 .btn {
@@ -136,6 +149,12 @@ nav li {
 	background: var(--third_color)
 }
 
+.websites {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 100%;
+}
 
 
 
@@ -149,6 +168,56 @@ nav li {
 	display: flex;
 	justify-content: center;
 	width: 25%;
+}
+
+.site {
+	display: flex;
+	margin: 10px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 2px solid black;
+background-image: radial-gradient(#ffffff 0%, rgba(255, 255, 255, 0.75) 20%, transparent 55%, rgba(0, 0, 0, 0.5) 65%);
+}
+
+.websites button{
+background: radial-gradient( rgb(171, 170, 170) 40%, rgb(0, 0, 0) 70%, rgba(255, 255, 255, 0.65) 75%);
+margin: 0 5px;
+border-radius: 50%;
+border: none;
+}
+
+.websites > :hover {
+	--hovered: 1;
+}
+
+.one {
+
+	background-color: red;
+}
+
+.two {
+	background-color: orange;
+}
+
+.three {
+	background-color: yellow;
+}
+
+.four {
+	background-color: green;
+}
+
+.five {
+	background-color: blue;
+}
+
+.six {
+	background-color: indigo;
+}
+
+.seven {
+	background-color: violet;
 }
 
 .star {
