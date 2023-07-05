@@ -92,7 +92,7 @@ nav li {
 	background-size: cover;
 	height: 5rem;
 	width: 5rem;
-transition: 1ms;
+	/* transition: 1ms; */
 }
 
 .index #duck:hover {
@@ -155,12 +155,11 @@ transition: 600ms 3s;
 	border-bottom: 2px solid hsla(0, 0%, 100%, 0.5);
 	outline: .5px solid rgba(255, 255, 255, 0.9);
 	z-index: -1;
-transition: 1s;
 	transform: translate(0px, 20px);
 	filter: blur(1px);
 	border-radius: 50%;
 	animation: bubbles 1s forwards linear;
-  animation-play-state: running;
+	animation-play-state: running;
 	animation-delay: calc(0.19s * var(--i));
 }
 
