@@ -3,22 +3,33 @@ function blink() {
 	star.classList.toggle("star_blink");
 }
 
+// playVideo to desend video and play,
+// retractVideo to restrict eventlistener to just video container 
+//and teapot illusion link
 
+const vid = document.querySelector("#vid");
+const video = document.querySelector(".video")
 let play = false;
 
-document.addEventListener('click', playVideo);
+if (vid) {
+	vid.addEventListener('click', playVideo)
+};
+if (video) {
+	video.addEventListener('click', retractVideo)
+};
 
+function retractVideo() {
+	video.style.transform = "translate(-50%,-200%)";
+	play = false;
+}
 
 function playVideo() {
-
 	if (!play) {
-		document.querySelector(".video").style.transform = "translate(-50%,-50%)";
+		video.style.transform = "translate(-50%,-50%)";
 
 		play = true;
 	} else {
-		document.querySelector(".video").style.transform = "translate(-50%,-200%)";
-
-		play = false;
+		retractVideo()
 	}
 }
 
@@ -27,10 +38,10 @@ function playVideo() {
 
 let x = "one";
 
-let idArray =["one", "two", "three", "four", "five", "six", "seven"];
+let idArray = ["one", "two", "three", "four", "five", "six", "seven"];
 
-document.getElementById(`one`).addEventListener("mouseover", degreeProgression);
-document.getElementById(`one`).addEventListener("mouseout", degreeStop);
+// document.getElementById(`one`).addEventListener("mouseover", degreeProgression);
+// document.getElementById(`one`).addEventListener("mouseout", degreeStop);
 
 
 
@@ -73,4 +84,33 @@ function degreeStop() {
 	console.log("done");
 	document.getElementById(`one`).style.backgroundImage = 'radial-gradient(rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.75) 20%, transparent 55%, rgba(0, 0, 0, 0.5) 65%)';
 
+}
+
+const bubble = document.querySelectorAll(".bubble");
+const duck = document.querySelector("#duck");
+console.log(bubble);
+document.getElementById('duck').addEventListener("mouseover", addBubbles);
+
+function addBubbles() {
+	console.log("in");
+	bubble.forEach((elem) => {
+		console.log(elem);
+		elem.classList.add('bubbles');
+	});
+	if (duck) {
+		duck.addEventListener("mouseout", removeBubbles);
+		duck.removeEventListener("mouseover", addBubbles);
+	}
+}
+
+function removeBubbles() {
+	console.log("out");
+
+	bubble.forEach((elem) => {
+		elem.classList.remove('bubbles');
+	});
+	if (duck) {
+		duck.addEventListener("mouseover", addBubbles);
+		duck.removeEventListener("mouseout", removeBubbles);
+	}
 }
