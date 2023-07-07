@@ -82,14 +82,14 @@ nav li {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	margin: 10rem 2rem 0;
+	margin: 30vh 2rem 5rem;
 }
 
 .index img {
 	height: 5rem;
 }
 
-#duck {
+.index #duck {
 	display: flex;
 	position: absolute;
 	bottom: 0;
@@ -103,12 +103,18 @@ nav li {
 	--hovered: 1;
 }
 
-.pond {
+.puddle {
 	display: flex;
 	position: absolute;
-	width: 90%;
 	height: 5rem;
 	bottom: 5vh;
+}
+
+.index .btn:hover {
+	border: black 3px solid;
+	background: hsl(195, 66%, 65%);
+	outline: 1px solid black;
+	outline-offset: -5px;
 }
 
 .index p {
@@ -126,7 +132,7 @@ nav li {
 	color: black;
 }
 
-.center {
+.center_logo {
 	display: flex;
 	flex-direction: column;
 	font-size: medium;
@@ -221,18 +227,17 @@ nav li {
 
 section {
 	display: flex;
-	padding: 0%;
 	position: relative;
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 	justify-content: center;
-	margin-top: 15vh;
 }
 
 .projects {
+	margin: 30vh auto 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	margin: 25vh 2rem 5vh;
+
 }
 
 .projects a:link,
@@ -241,50 +246,28 @@ section {
 }
 
 .btn {
-	padding: 5% 20%;
 	border: var(--background2) 3px solid;
 	background: var(--hover);
-	margin: 7rem auto 0;
 	font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
 	font-size: medium;
-	transition: .2s all;
+	padding: 5% 20%;
+	margin: 5rem auto 0;
+	transition: .1s all;
+	cursor: pointer;
 }
 
-.index .btn:hover {
-	border: black 3px solid;
-	background: var(--primary_link);
-	outline: 1px solid black;
-	outline-offset: -5px;
+
+.projects p {
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+margin-bottom: 5rem;
 }
 
 .websites {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	width: 100%;
-	transition: .15s ease;
-}
-
-.proj_art {
-	margin-top: 2rem;
-	display: flex;
-	justify-content: space-evenly;
-}
-
-.proj_art p {
-	display: flex;
-	justify-content: center;
-	width: 25%;
-}
-
-.websites button>a {
-	display: flex;
-	margin: 10px;
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	border: 4px solid black;
-	background-image: radial-gradient(rgba(255, 243, 243, 0.25) 10%, rgba(255, 255, 255, 0.15) 20%, rgba(0, 0, 0, 0.4) 60%);
+	width: 80%;
+	margin: 0 auto 5rem;
 	transition: .15s ease;
 }
 
@@ -293,84 +276,92 @@ section {
 	position: relative;
 	justify-content: space-evenly;
 	justify-items: center;
-	background: radial-gradient(rgb(0, 0, 0) 5%0, rgb(236, 236, 236) 52%, rgb(20, 20, 20) 55%, rgba(255, 255, 255, 0.65) 80%);
-	margin: 5px;
+	background-image: radial-gradient(rgb(255, 255, 255) 20%, black 30%, rgb(0, 0, 0) 47%, rgb(215, 215, 215) 52%, rgb(20, 20, 20) 56%, transparent 80%),
+		repeating-conic-gradient(rgb(117, 116, 120) .5deg, rgb(255, 255, 255) .60deg);
+	aspect-ratio: 1;
+	width: 12%;
 	border-radius: 50%;
-	border: rgb(0, 0, 0) 2px solid;
-	transition: .15s ease;
+	border: rgb(130, 130, 130) 2px solid;
 }
 
 .websites> :hover {
-	outline: white 3px solid;
+	outline: rgb(255, 255, 255) 2px dashed;
 	outline-offset: 5px;
 	--hovered: 1;
 }
 
-.one {
+.websites button>a {
 	display: flex;
-	position: relative;
-	background-color: hsl(0, 100%, 50%);
+	position: absolute;
+	width: 55%;
+	aspect-ratio: 1;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+}
+
+.websites button>a:active {
+	scale: .95;
+	top: 50%;
+	left: 50%;
+	transform: translate(-52.6%, -52.6%);
+}
+
+.one {
+	background: radial-gradient(ellipse, hsl(0, 53%, 65%) 5%, hsl(0, 86%, 29%) 50%, hsla(0, 86%, 33%, 0.65) 65%);
 }
 
 #one a:active {
-	background: radial-gradient(hsl(0, 90%, 85%) 0%, hsla(0, 70%, 50%, 0.8) 45%, hsl(0, 49%, 21%) 65%, rgb(0, 0, 0) 70%);
-	scale: .98;
+	background: radial-gradient(hsl(0, 100%, 85%) 0%, hsla(0, 100%, 61%, 0.75) 55%, rgba(0, 0, 0, 0.75) 85%);
 }
 
 .two {
-	display: flex;
-	position: relative;
-	background-color: hsl(39, 100%, 50%);
+	background: radial-gradient(ellipse, hsl(39, 53%, 65%) 5%, hsl(39, 86%, 29%) 50%, hsla(39, 86%, 33%, 0.65) 65%);
 }
 
 #two a:active {
-	background: radial-gradient(hsl(39, 90%, 85%) 0%, hsla(39, 81%, 54%, 0.8) 45%, hsl(39, 49%, 21%) 65%, rgb(0, 0, 0) 70%);
-	scale: .98;
+	background: radial-gradient(hsl(39, 100%, 85%) 0%, hsla(39, 100%, 61%, 0.75) 55%, rgba(0, 0, 0, 0.75) 85%);
 }
 
 .three {
-	background-color: hsl(60, 100%, 50%);
+	background: radial-gradient(ellipse, hsl(60, 53%, 65%) 5%, hsl(60, 86%, 29%) 50%, hsla(60, 86%, 33%, 0.65) 65%);
 }
 
 #three a:active {
-	background: radial-gradient(hsl(60, 90%, 85%) 0%, hsla(60, 81%, 54%, 0.8) 45%, hsl(60, 49%, 21%) 65%, rgb(0, 0, 0) 70%);
-	scale: .98;
+	background: radial-gradient(hsl(60, 100%, 85%) 0%, hsla(60, 100%, 61%, 0.75) 55%, rgba(0, 0, 0, 0.75) 85%);
 }
 
 .four {
-	background-color: hsl(120, 100%, 25%);
+	background: radial-gradient(ellipse, hsl(120, 53%, 65%) 5%, hsl(120, 86%, 29%) 50%, hsla(120, 86%, 33%, 0.65) 65%);
 }
 
 #four a:active {
-	background: radial-gradient(hsl(120, 90%, 85%) 0%, hsla(120, 81%, 54%, 0.8) 45%, hsl(120, 49%, 21%) 65%, rgb(0, 0, 0) 70%);
-	scale: .98;
+	background: radial-gradient(hsl(120, 100%, 85%) 0%, hsla(120, 100%, 61%, 0.75) 55%, rgba(0, 0, 0, 0.75) 85%);
 }
 
 .five {
-	background-color: hsl(240, 100%, 50%);
+	background: radial-gradient(ellipse, hsl(240, 53%, 65%) 5%, hsl(240, 86%, 29%) 50%, hsla(240, 86%, 33%, 0.65) 65%);
 }
 
 #five a:active {
-	background: radial-gradient(hsl(240, 90%, 85%) 0%, hsla(240, 81%, 54%, 0.8) 45%, hsl(240, 49%, 21%) 65%, rgb(0, 0, 0) 70%);
-	scale: .98;
+	background: radial-gradient(hsl(240, 100%, 85%) 0%, hsla(240, 100%, 61%, 0.75) 55%, rgba(0, 0, 0, 0.75) 85%);
 }
 
 .six {
-	background-color: hsl(275, 100%, 25%);
+	background: radial-gradient(ellipse, hsl(275, 53%, 65%) 5%, hsl(275, 86%, 29%) 50%, hsla(275, 86%, 33%, 0.65) 65%);
 }
 
 #six a:active {
-	background: radial-gradient(hsl(275, 90%, 85%) 0%, hsla(275, 81%, 54%, 0.8) 45%, hsl(274, 49%, 21%) 65%, rgb(0, 0, 0) 70%);
-	scale: .98;
+	background: radial-gradient(hsl(275, 100%, 85%) 0%, hsla(275, 100%, 61%, 0.75) 55%, rgba(0, 0, 0, 0.75) 85%);
 }
 
 .seven {
-	background-color: hsl(300, 76%, 72%);
+	background: radial-gradient(ellipse, hsl(300, 53%, 65%) 5%, hsl(300, 86%, 29%) 50%, hsla(300, 86%, 33%, 0.65) 65%);
 }
 
 #seven a:active {
-	background: radial-gradient(hsl(300, 90%, 85%) 0%, hsla(300, 81%, 54%, 0.8) 45%, hsl(300, 49%, 21%) 65%, rgb(0, 0, 0) 70%);
-	scale: .98;
+	background: radial-gradient(hsl(300, 100%, 85%) 0%, hsla(300, 100%, 61%, 0.75) 55%, rgba(0, 0, 0, 0.75) 85%);
 }
 
 .star {
