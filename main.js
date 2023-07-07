@@ -87,6 +87,7 @@ function degreeStop() {
 }
 
 const bubble = document.querySelectorAll(".bubble");
+const mbubble = document.querySelectorAll(".mbubble");
 const duck = document.querySelector("#duck");
 console.log(bubble);
 document.getElementById('duck').addEventListener("mouseover", addBubbles);
@@ -97,20 +98,38 @@ function addBubbles() {
 		console.log(elem);
 		elem.classList.add('bubbles');
 	});
+	mbubble.forEach((elem) => {
+		console.log(elem);
+		elem.classList.add('bubbles2');
+	});
 	if (duck) {
-		duck.addEventListener("mouseout", removeBubbles);
+		duck.addEventListener("mouseout", delayBubbleFade);
 		duck.removeEventListener("mouseover", addBubbles);
 	}
 }
 
-function removeBubbles() {
-	console.log("out");
 
+function delayBubbleFade() {
+	const bubbleStream = setTimeout(removeBubbles, 2550);
+
+	return bubbleStream;
+}
+
+
+function removeBubbles(bubbleStream) {
+	console.log("out");
 	bubble.forEach((elem) => {
 		elem.classList.remove('bubbles');
 	});
+	mbubble.forEach((elem) => {
+		elem.classList.remove('bubbles2');
+	});
+
+
 	if (duck) {
 		duck.addEventListener("mouseover", addBubbles);
-		duck.removeEventListener("mouseout", removeBubbles);
+		duck.removeEventListener("mouseout", delayBubbleFade);
+		clearTimeout(bubbleStream);
 	}
+
 }
