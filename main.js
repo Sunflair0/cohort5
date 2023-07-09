@@ -33,11 +33,13 @@ function playVideo() {
 	}
 }
 
-
 const bubble = document.querySelectorAll(".bubble");
 const mbubble = document.querySelectorAll(".mbubble");
-const duck = document.querySelector("#duck");
-document.getElementById('duck').addEventListener("mouseover", addBubbles);
+const duck = document.querySelector("#duck_bubble_starter");
+
+if (duck) {
+		duck.addEventListener("mouseover", addBubbles);
+	}
 
 function addBubbles() {
 	bubble.forEach((elem) => {

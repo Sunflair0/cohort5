@@ -9,7 +9,7 @@
 	<title>C5 Projects</title>
 </head>
 
-<body>
+<body id="body_project">
 	<nav>
 		<ul>
 			<li class="btn_style now">
@@ -41,11 +41,11 @@
 	</nav>
 
 	<div class="projects">
-<section>
-<p>These are the final projects of the students in code camp 2023.
+		<section>
+			<p>These are the final projects of the students in code camp 2023.
 
-</p>
-</section>
+			</p>
+		</section>
 
 		<section>
 			<div class="websites">
@@ -66,113 +66,29 @@
 			</div>
 		</section>
 
+		<svg>
 
-		<a class="pond" id="duck" href="https://en.wikipedia.org/wiki/Rubber_duck_debugging" target="_blank"
+			<filter id="pond" x="0" y="0" width="120%" height="100%">
+				<feTurbulence stitchTiles="noStitch" baseFrequency="10" numOctaves="5" result="NOISE" id="turbulence" />
+				<feDisplacementMap in="SourceGraphic" scale="10.5" />
+				<animate xlink:href="#turbulence" attributeName="baseFrequency" dur="90s" keyTimes="0;.5;1"
+					values="0.02 0.01; 0.02 3; 0.02 0.01" repeatCount="indefinite" />
+			</filter>
+		</svg>
+<div class="tub"></div>	
+		<a class="duck" href="https://en.wikipedia.org/wiki/Rubber_duck_debugging" target="_blank"
 			rel="noopener noreferrer"></a>
 
-		<span class="bubble" style="--i:7"></span>
-		<span class="bubble" style="--i:3.1"></span>
-		<span class="bubble" style="--i:1.2"></span>
-		<span class="bubble" style="--i:2.9"></span>
-		<span class="bubble" style="--i:2"></span>
-		<span class="bubble" style="--i:2.7"></span>
-		<span class="bubble" style="--i:2.7"></span>
-
-
-
-		<!-- <section>
-			<div id="cal" class="calendar">
-				<div class="day_wrapper">
-					<div class="dayname" dayname="SUN"></div>
-					<div class="dayname" dayname="MON"></div>
-					<div class="dayname" dayname="TUES"></div>
-					<div class="dayname" dayname="WED"></div>
-					<div class="dayname" dayname="THUR"></div>
-					<div class="dayname" dayname="FRI"></div>
-					<div class="dayname" dayname="SAT"></div>
-				</div>
-				<div class="week">
-					<div class="day" day="M">
-					</div>
-					<div class="day" day="M">
-					</div>
-					<div class="day" day="M">
-					</div>
-					<div class="day" day="M">
-					</div>
-					<div class="day" day="1">
-					</div>
-					<div class="day" day="2">
-					</div>
-					<div class="day" day="3" weekend="😁">
-					</div>
-				</div>
-				<div class="week">
-					<div class="day" day="4" weekend="😒">
-					</div>
-					<div class="day" day="5">
-					</div>
-					<div class="day" day="6">
-					</div>
-					<div class="day" day="7">
-					</div>
-					<div class="day" day="8">
-					</div>
-					<div class="day" day="9">
-					</div>
-					<div class="day" day="10" weekend="😁">
-					</div>
-				</div>
-				<div class="week">
-					<div class="day" day="11" weekend="😒">
-					</div>
-					<div class="day" day="12">
-					</div>
-					<div class="day" day="13">
-					</div>
-					<div class="day" day="14">
-					</div>
-					<div class="day" day="15">
-					</div>
-					<div class="day" day="16">
-					</div>
-					<div class="day" day="17" weekend="😁">
-					</div>
-				</div>
-				<div class="week">
-					<div class="day" day="18" weekend="😒">
-					</div>
-					<div class="day" day="19">
-					</div>
-					<div class="day" day="20">
-					</div>
-					<div class="day" day="21">
-					</div>
-					<div class="day" day="22">
-					</div>
-					<div class="day" day="23">
-					</div>
-					<div class="day" day="24" weekend="😁">
-					</div>
-				</div>
-				<div class="week">
-					<div class="day" day="25" weekend="😒">
-					</div>
-					<div class="day" day="26">
-					</div>
-					<div class="day" day="27">
-					</div>
-					<div class="day" day="28">
-					</div>
-					<div class="day" day="29">
-					</div>
-					<div class="day" day="30">
-					</div>
-					<div class="day" day="Jul">
-					</div>
-				</div>
-			</div>
-		</section> -->
+		<div class="pond">
+		
+				<span class="bubble" style="--i:1"></span>
+				<span class="bubble" style="--i:2"></span>
+				<span class="bubble" style="--i:3"></span>
+				<span class="bubble" style="--i:4"></span>
+				<span class="bubble" style="--i:5"></span>
+				<span class="bubble" style="--i:6"></span>
+				<span class="bubble" style="--i:7"></span>
+		</div>
 	</div>
 	<script src="main.js"></script>
 
