@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish&family=Open+Sans&family=Oswald:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish&family=Roboto&family=Kumar+One+Outline&family=Oswald&family=Open+Sans&family=Playfair:wght@600&display=swap');
 
 :root {
 	--primary_link: rgb(32, 124, 155);
@@ -13,6 +13,7 @@
 html {
 	scroll-behavior: smooth;
 	height: 100vh;
+	font-family: "Mulish", sans-serif;
 }
 
 body {
@@ -22,8 +23,9 @@ body {
 }
 
 #body_project {
-	background: linear-gradient(180deg, transparent 90%,transparent 90%, rgb(23, 4, 118) 91%, rgb(41, 15, 90) 50%), linear-gradient(30deg, var(--background1) -15%, var(--background2) 35%);
-overflow: hidden;
+	background: linear-gradient(180deg, transparent 90%, transparent 90%, rgb(23, 4, 118) 91%, rgb(41, 15, 90) 50%), linear-gradient(30deg, var(--background1) -15%, var(--background2) 35%);
+	overflow: hidden;
+	color: var(--secondary_color);
 }
 
 #body_trip {
@@ -36,19 +38,19 @@ overflow: hidden;
 }
 
 nav {
+	font-family: "Playfair", Georgia, 'Times New Roman', Times, serif;
 	text-transform: uppercase;
-	font-size: large;
+	font-size: 1.25em;
 }
 
 nav a {
-	border-bottom: transparent solid 2px;
-	border-top: transparent solid 2px;
+	border-bottom: transparent solid .15em;
+	border-top: transparent solid .15em;
 	transition: .3s all;
 }
 
 nav a:link {
 	text-decoration: none;
-	color: gold;
 }
 
 nav a:visited {
@@ -57,9 +59,9 @@ nav a:visited {
 
 nav a:hover {
 	color: var(--third_color);
-	padding: 5px 0;
-	border-bottom: var(--hover) solid 2px;
-	border-top: var(--hover) solid 2px;
+	padding: .175em 0;
+	border-bottom: var(--hover) solid .15em;
+	border-top: var(--hover) solid .15em;
 }
 
 nav a:active {
@@ -73,7 +75,7 @@ ul {
 	outline: 2px solid var(--inset_border);
 	outline-offset: -2px;
 	border-bottom: var(--background1) 4px solid;
-	padding: 2rem 0;
+	padding: .75em 0;
 	background: rgb(0, 0, 0);
 	top: 0;
 	width: 100%;
@@ -85,11 +87,11 @@ nav li {
 	list-style: none;
 }
 
-.index {
+.shell{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	margin: 30vh 0 5rem;
+	margin: 25vh 0 5rem;
 }
 
 .index img {
@@ -119,11 +121,10 @@ nav li {
 	bottom: 5vh;
 }
 
-.index .btn:hover {
-	border: black 3px solid;
-	background: hsl(195, 66%, 65%);
-	outline: 1px solid black;
-	outline-offset: -5px;
+.index {
+margin-top: 15rem;
+	font-family: 'Mulish', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-weight: 800;
 }
 
 .index p {
@@ -144,8 +145,8 @@ nav li {
 .center_logo {
 	display: flex;
 	flex-direction: column;
-	font-size: medium;
-	font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
+	font-family: "Oswald", sans-serif;
+	font-weight: 400;
 }
 
 .bubbles2 {
@@ -229,20 +230,17 @@ nav li {
 	width: 100%;
 	height: clamp(2.2rem, 8vh, 5rem);
 	bottom: 0;
-	background: repeating-linear-gradient(0deg, 
-				rgb(11, 1, 64), 
-				rgba(4, 72, 103, 0.6), 
-				rgba(27, 110, 174, 0.64), 
-				rgba(4, 6, 99, 0.77), 
-				rgba(8, 90, 183, 0.5));
+	background: repeating-linear-gradient(0deg,
+			rgb(11, 1, 64),
+			rgba(4, 72, 103, 0.6),
+			rgba(27, 110, 174, 0.64),
+			rgba(4, 6, 99, 0.77),
+			rgba(8, 90, 183, 0.5),
+rgba(21, 21, 79, 0.795));
 	border-radius: 5%;
 	filter: url("#pond");
 
 
-}
-
-svg{
-position: absolute;
 }
 
 @keyframes bobbing {
@@ -250,9 +248,11 @@ position: absolute;
 	25% {
 		transform: translateY(2px);
 	}
+
 	50% {
 		transform: translateY(0px);
 	}
+
 	75% {
 		transform: translateY(1px);
 	}
@@ -272,32 +272,32 @@ position: absolute;
 section {
 	display: flex;
 	position: relative;
-	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 	justify-content: center;
 }
 
-.projects {
-	margin: 30vh auto 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-
-}
 
 .projects a:link,
 .projects a:visited {
 	color: var(--third_color);
 }
 
-.btn {
+.index .btn {
 	border: var(--background2) 3px solid;
 	background: var(--hover);
 	font-family: "Oswald", Verdana, Geneva, Tahoma, sans-serif;
 	font-size: medium;
 	padding: 5% 20%;
 	margin: 5rem auto 0;
-	transition: .1s all;
+	transition: .1s all linear;
 	cursor: pointer;
+}
+
+
+.index .btn:hover {
+	border: black 3px solid;
+	background: hsl(195, 66%, 70%);
+	outline: 1px solid black;
+	outline-offset: -5px;
 }
 
 
@@ -353,7 +353,7 @@ section {
 }
 
 .one {
-	background: radial-gradient(ellipse, hsl(0, 53%, 65%) 5%, hsl(0, 86%, 29%) 50%, hsla(0, 86%, 33%, 0.65) 65%);
+	background: radial-gradient(circle, hsl(0, 53%, 65%) 5%, hsl(0, 86%, 29%) 50%, hsla(0, 86%, 33%, 0.65) 62%), hsl(0, 100%, 12%) 64%;
 }
 
 #one a:active {
@@ -361,7 +361,7 @@ section {
 }
 
 .two {
-	background: radial-gradient(ellipse, hsl(39, 53%, 65%) 5%, hsl(39, 86%, 29%) 50%, hsla(39, 86%, 33%, 0.65) 65%);
+	background: radial-gradient(circle, hsl(39, 53%, 65%) 5%, hsl(39, 86%, 29%) 50%, hsla(39, 86%, 33%, 0.65) 62%), hsl(39, 100%, 12%) 64%;
 }
 
 #two a:active {
@@ -369,7 +369,7 @@ section {
 }
 
 .three {
-	background: radial-gradient(ellipse, hsl(60, 53%, 65%) 5%, hsl(60, 86%, 29%) 50%, hsla(60, 86%, 33%, 0.65) 65%);
+	background: radial-gradient(circle, hsl(60, 53%, 65%) 5%, hsl(60, 86%, 29%) 50%, hsla(60, 86%, 33%, 0.65) 62%), hsl(60, 100%, 12%) 64%;
 }
 
 #three a:active {
@@ -377,7 +377,7 @@ section {
 }
 
 .four {
-	background: radial-gradient(ellipse, hsl(120, 53%, 65%) 5%, hsl(120, 86%, 29%) 50%, hsla(120, 86%, 33%, 0.65) 65%);
+	background: radial-gradient(circle, hsl(120, 53%, 65%) 5%, hsl(120, 86%, 29%) 50%, hsla(120, 86%, 33%, 0.65) 65%, hsl(120, 97%, 24%) 66%);
 }
 
 #four a:active {
@@ -385,7 +385,7 @@ section {
 }
 
 .five {
-	background: radial-gradient(ellipse, hsl(240, 53%, 65%) 5%, hsl(240, 86%, 29%) 50%, hsla(240, 86%, 33%, 0.65) 65%);
+	background: radial-gradient(circle, hsl(240, 53%, 65%) 5%, hsl(240, 86%, 29%) 50%, hsla(240, 86%, 33%, 0.65) 62%), hsl(240, 100%, 12%) 64%;
 }
 
 #five a:active {
@@ -393,7 +393,7 @@ section {
 }
 
 .six {
-	background: radial-gradient(ellipse, hsl(275, 53%, 65%) 5%, hsl(275, 86%, 29%) 50%, hsla(275, 86%, 33%, 0.65) 65%);
+	background: radial-gradient(circle, hsl(275, 53%, 65%) 5%, hsl(275, 86%, 29%) 50%, hsla(275, 86%, 33%, 0.65) 62%), hsl(275, 100%, 12%) 64%;
 }
 
 #six a:active {
@@ -401,12 +401,14 @@ section {
 }
 
 .seven {
-	background: radial-gradient(ellipse, hsl(300, 53%, 65%) 5%, hsl(300, 86%, 29%) 50%, hsla(300, 86%, 33%, 0.65) 65%);
+	background: radial-gradient(circle, hsl(300, 53%, 65%) 5%, hsl(300, 86%, 29%) 50%, hsla(300, 86%, 33%, 0.65) 62%), hsl(0, 0%, 0%) 64%;
 }
 
 #seven a:active {
 	background: radial-gradient(hsl(300, 100%, 85%) 0%, hsla(300, 100%, 61%, 0.75) 55%, rgba(0, 0, 0, 0.75) 85%);
 }
+
+
 
 .star {
 	display: flex;
@@ -438,6 +440,28 @@ section {
 		rotate: 360deg;
 	}
 
+}
+
+.speakers p {
+
+font-family: "Kumar One Outline";
+ /* color: rgb(231, 251, 131); */
+margin: 2rem;
+  text-shadow:
+   -4px -4px 6px rgba(234, 220, 14, 0.6),  
+    4px -4px 6px rgba(234, 220, 14, 0.6),
+    -4px 4px 6px rgba(234, 220, 14, 0.6),
+     4px 4px 6px rgba(234, 220, 14, 0.6);
+
+-webkit-text-stroke: 1px rgba(235, 221, 221, 0.23);
+   /* color: white; */
+   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+font-size: x-large;
 }
 
 .song {
@@ -503,10 +527,10 @@ section {
 .trip {
 	display: flex;
 	flex-direction: column;
-	font-family: "Mulish", sans-serif;
-	margin: 5rem;
+	margin: 1rem;
 	line-height: 1.5;
 	font-size: 16px;
+overflow-x: initial;
 }
 
 .trip_box {
