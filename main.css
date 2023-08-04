@@ -142,7 +142,7 @@ nav li {
 header {
 	display: flex;
 	position: absolute;
-	margin-top: 4vh;
+	margin-top: 16vh;
 }
 
 .slideshow_wrapper {
@@ -353,6 +353,9 @@ header {
 	color: black;
 }
 
+.projects section {
+height: 0;
+}
 .dry_towel {
 	display: flex;
 	position: absolute;
@@ -461,6 +464,7 @@ header {
 	margin: 0;
 	display: flex;
 	position: absolute;
+overflow: hidden;
 	width: 100%;
 	height: clamp(2.2rem, 8vh, 5rem);
 	bottom: 0;
