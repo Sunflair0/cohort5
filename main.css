@@ -6,7 +6,7 @@
 	--secondary_color: rgb(199, 168, 112);
 	--third_color: whitesmoke;
 	--active: rgb(0, 181, 239);
-	--background1: #624723;
+	--background1: #dc891b;
 	--background2: rgb(70, 21, 1);
 	--inset_border: rgb(41, 6, 6);
 	--towel: pink;
@@ -951,12 +951,21 @@ background-position: center;
 }
 
 .about {
-	/* display: flex;
-	position: absolute; */
+display: flex;
 	margin: 10vh 5% 0;
 }
-.about p {
-margin-top: 2rem;
+
+.about_card {
+display: flex;
+justify-content: space-around;
+color: var(--inset_border);
+width: calc(100% - 6em);
+height: 40vh;
+
+background-color: antiquewhite;
+padding: 2em;
+outline: 2px solid var(--inset_border);
+outline-offset: -8px;
 }
 
 footer {
@@ -983,12 +992,7 @@ background-size: contain;
 margin-right: 0;
 }
 
-.card2 {
-width: 350px;
-min-height: 500px;
-background-color: antiquewhite;
 
-}
 
 .b {
 display: flex;
