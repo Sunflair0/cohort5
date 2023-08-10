@@ -54,8 +54,8 @@ body {
 }
 
 #logo_head {
-height: 2rem;
-margin-top: 3rem;
+	height: 2rem;
+	margin-top: 3rem;
 }
 
 .svg_hide {
@@ -103,7 +103,7 @@ svg {
 nav {
 	font-family: "Playfair", Georgia, 'Times New Roman', Times, serif;
 	text-transform: uppercase;
-	font-size: clamp(0.75em, 3.5avw, 1.25em);
+	font-size: clamp(0.75em, 3.5vw, 1.25em);
 }
 
 nav a {
@@ -176,7 +176,7 @@ nav li {
 	position: absolute;
 	margin-right: 0;
 	max-width: 100%;
-background-position: center;
+	background-position: center;
 	background-size: cover;
 	z-index: -1;
 }
@@ -950,22 +950,45 @@ background-position: center;
 	max-width: 340px;
 }
 
+.tagline {
+text-align: center;
+margin: 2rem;
+}
+
+.tagline a:link, .tagline a:visited{
+text-decoration: none;
+color: #00b5ef;
+}
+
 .about {
-display: flex;
-	margin: 10vh 5% 0;
+	display: flex;
+	position: relative;
+	width: calc(100%-2px);
+	justify-content: center;
 }
 
 .about_card {
-display: flex;
-justify-content: space-around;
-color: var(--inset_border);
-width: calc(100% - 6em);
-height: 40vh;
+	display: flex;
+	justify-content: center;
+	color: var(--inset_border);
+	margin: 5vh 2vw;
+	width: 250px;
+	height: 40vh;
+	background-color: antiquewhite;
+	padding: 2em;
+	outline: 2px solid var(--inset_border);
+	outline-offset: -8px;
+}
 
-background-color: antiquewhite;
-padding: 2em;
-outline: 2px solid var(--inset_border);
-outline-offset: -8px;
+.about_card2 {
+	display: flex;
+	color: var(--inset_border);
+	width: calc(50% - 4em);
+	height: 40vh;
+	background-color: antiquewhite;
+	padding: 2em;
+	outline: 2px solid var(--inset_border);
+	outline-offset: -8px;
 }
 
 footer {
@@ -986,19 +1009,19 @@ footer {
 }
 
 .ab_pic {
-display: block;
-position: relative;
-background-size: contain;
-margin-right: 0;
+	display: block;
+	position: relative;
+	background-size: contain;
+	margin-right: 0;
 }
 
 
 
 .b {
-display: flex;
-position: relative;
-height: 20%;
-width: 80%;
-padding: 5%;
-background-color: #624723a0;
+	display: flex;
+	position: relative;
+	height: 20%;
+	width: 80%;
+	padding: 5%;
+	background-color: #624723a0;
 }
