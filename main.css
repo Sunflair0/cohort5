@@ -2,11 +2,11 @@
 @import url('https://fonts.cdnfonts.com/css/embroidery');
 
 :root {
-	--primary_link: rgb(32, 124, 155);
+	--primary_link: #00b5ef;
 	--secondary_color: rgb(199, 168, 112);
 	--third_color: whitesmoke;
 	--active: rgb(0, 181, 239);
-	--background1: #dc891b;
+	--background1: #fda839;
 	--background2: rgb(70, 21, 1);
 	--inset_border: rgb(41, 6, 6);
 	--towel: pink;
@@ -26,17 +26,24 @@ body {
 	color: var(--third_color);
 }
 
+ 
+body::-webkit-scrollbar{
+width: 0px;
+}
+
 #full {
 	display: flex;
 	height: 97vh;
 }
 
 #wide {
+	display: flex;
+	position: absolute;
 	width: 100%;
 	height: 100vh;
 	right: 0;
 	bottom: 0;
-	position: absolute;
+
 }
 
 .logo_repeat {
@@ -47,7 +54,10 @@ body {
 	overflow: hidden;
 	margin-top: 2vh;
 	height: 96vh;
-	background: linear-gradient(hsla(0, 0%, 0%, 0.75) 40%, hsla(0, 0%, 0%, 0.85) 50%);
+	box-shadow: inset -10px 30px 10px rgba(134, 134, 134, 0.3),
+		inset -1px 18px 2px rgba(83, 83, 83, 0.4),
+		inset 12px -40px 17px rgba(0, 0, 0, 0.734);
+	background: linear-gradient(180deg, hsla(0, 0%, 0%, 0.65) 50%, hsla(0, 0%, 0%, 0.6) 60%);
 	width: clamp(28%, 2vw, 207px);
 	max-width: 207px;
 	z-index: 3;
@@ -55,7 +65,7 @@ body {
 
 #logo_head {
 	height: 2rem;
-	margin-top: 3rem;
+	margin-top: 4rem;
 }
 
 .svg_hide {
@@ -72,15 +82,15 @@ svg {
 }
 
 .line_logo {
-	fill: #00b5ef;
-	stroke: #00b5ef;
+	fill: var(--primary_link);
+	stroke: var(--primary_link);
 	stroke-width: 3px;
 	stroke-linejoin: round;
 }
 
 .outline_logo {
 	fill: none;
-	stroke: #00b5ef;
+	stroke: var(--primary_link);
 	stroke-width: 3px;
 	stroke-linejoin: round;
 }
@@ -159,49 +169,44 @@ nav li {
 } */
 
 
-.slideshow_wrapper {
+/* .slideshow_wrapper {
 	display: flex;
 	position: absolute;
 	right: 0;
 	top: 0;
-	/* background: #00000000; */
+
 	width: 100%;
 	height: 100vh;
 	z-index: -1;
-	/* rgb(76, 101, 130) */
-}
-
+	/* rgb(76, 101, 130) 
+} 
+*/
 .slideshow_images {
 	display: flex;
 	position: absolute;
-	margin-right: 0;
+	right: 0;
 	max-width: 100%;
 	background-position: center;
 	background-size: cover;
-	z-index: -1;
-}
+	filter: brightness(50%);
+	overflow: hidden;
 
-.slideshow_images::before {
-	content: "";
-	position: absolute;
-	right: 0%;
-	background: rgba(0, 0, 0, 0.5);
-	width: 90%;
-	height: 100%;
-	z-index: 10;
+	@media screen and (min-width: 950px) {
+		width: 90%;
+	}
 }
 
 .slideshow_images>img {
 	display: flex;
 	position: relative;
 	opacity: 1;
-	width: 90vw;
+	width: 100vw;
 	z-index: 5;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: 100vw 100vh;
 	background-size: cover;
+
 	/* animation: slideshow 36s calc(1s * var(--j)) linear infinite; */
 }
 
@@ -233,7 +238,7 @@ nav li {
 	position: relative;
 	font-family: 'Mulish', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 	font-weight: 800;
-	overflow: hidden;
+overflow: hidden;
 }
 
 .index p {
@@ -373,7 +378,6 @@ nav li {
 	left: 2rem;
 }
 
-
 .projects a:link,
 .projects a:visited {
 	color: black;
@@ -473,7 +477,7 @@ nav li {
 			rgba(4, 25, 92, 0.9) 0 1px,
 			rgb(0, 0, 0) 1px 3px,
 			rgba(255, 255, 255, 0.5) 3px 4px, transparent 4px 44px),
-		repeating-linear-gradient(rgb(235, 250, 255) 0 2px, rgb(255, 240, 240) 8px 14px, rgba(145, 139, 170, 0.886) 18px 20px, transparent 20px 80px),
+		repeating-linear-gradient(rgb(14, 10, 27) 0 1px, rgb(171, 171, 171) 1px 2px, rgb(255, 255, 255) 8px 14px, rgb(238, 236, 250) 18px 20px, transparent 20px 80px),
 		repeating-linear-gradient(225deg,
 			transparent 0 4px,
 			rgba(149, 105, 152, 0.1) 4px 10px,
@@ -495,11 +499,12 @@ nav li {
 	display: flex;
 	position: absolute;
 	clip-path: polygon(78% 11%, 90% 14%, 100% 21%, 100% 70%, 78% 45%, 22% 45%, 0 70%, 0 21%, 10% 14%, 22% 11%);
-	background: linear-gradient(black 0%, rgb(161, 161, 161) 25%, rgb(254, 247, 237) 35%, rgba(255, 255, 255, 0.8) 70%);
+	background: radial-gradient(ellipse, transparent 70%, rgb(140, 140, 140) 75% 90%, rgb(252, 252, 252) 100%),
+linear-gradient(black 0%, rgb(255, 255, 255) 32%);
+;
 	width: 100%;
 	height: 12.5vh;
 	bottom: 0%;
-	overflow: hidden;
 }
 
 .water {
@@ -510,8 +515,8 @@ nav li {
 	border-right: 15px solid white;
 	border-left: 15px solid white;
 	width: calc(100% - 30px);
-	height: clamp(2.2rem, 8vh + .1em, 5rem);
-	bottom: -.1rem;
+	height: clamp(4.5rem, 8vh + .1em, 5rem);
+	bottom: 0vh;
 	left: -.5rem;
 	background: repeating-linear-gradient(0deg,
 			rgb(1, 5, 7) 35%,
@@ -522,11 +527,9 @@ nav li {
 			rgba(77, 215, 228, 0.7),
 			rgba(5, 38, 92, 0.5),
 			rgb(205, 247, 255));
-	border-radius: 65%;
+	border-radius: 45%;
 	filter: url("#water");
 	z-index: 10;
-	overflow: hidden;
-
 }
 
 @keyframes bobbing {
@@ -558,8 +561,6 @@ nav li {
 
 .projects p {
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	margin-bottom: 5rem;
-
 }
 
 #spacer {
@@ -572,7 +573,6 @@ nav li {
 	display: flex;
 	position: relative;
 	justify-content: center;
-	margin-top: 15vh;
 }
 
 #bath {
@@ -581,13 +581,35 @@ nav li {
 	bottom: 0;
 }
 
+#plant {
+	display: flex;
+	position: absolute;
+	bottom: 9vh;
+	aspect-ratio: 2/1;
+	left: 70%;
+	filter: brightness(105%);
+	z-index: -1;
+}
+
 .websites {
 	display: flex;
 	position: absolute;
 	justify-content: space-between;
-	margin-top: 35vh;
-	width: 85%;
+	margin-top: 22vh;
+	width: 95%;
 	transition: .15s ease;
+}
+
+.websites button a:has(:visited) {
+	transform: rotate(5deg);
+background-color: white;
+}
+
+.websites button a:visited {
+   rotate: 20deg;
+
+border-color: rgb(7, 79, 143);
+
 }
 
 .websites button {
@@ -631,11 +653,11 @@ nav li {
 	transform: translate(-52.6%, -52.6%);
 }
 
-.websites button>a:visited {
-	rotate: 90deg;
+/* .websites button>a:visited {
+	rotate: 10deg;
 	background-color: linear-gradient(black, white);
 
-}
+} */
 
 .one {
 	background: radial-gradient(circle, hsl(0, 53%, 65%) 5%, hsl(0, 86%, 29%) 50%, hsla(0, 86%, 33%, 0.65) 62%), hsl(0, 100%, 12%) 64%;
@@ -645,8 +667,9 @@ nav li {
 	background-color: radial-gradient(hsl(0, 100%, 85%) 0%, hsla(0, 100%, 61%, 0.75) 55%, rgba(0, 0, 0, 0.75) 85%);
 }
 
-#one a:visited {
-	background-color: radial-gradient(hsl(0, 100%, 85%) 0%, hsla(0, 100%, 61%, 0.75) 55%, rgba(0, 0, 0, 0.75) 85%) !important;
+button#one a:visited {
+transform: rotateY(45deg); 
+	background-color: radial-gradient(circle, blue, lightblue);
 }
 
 .two {
@@ -754,10 +777,9 @@ nav li {
 .trip {
 	display: flex;
 	flex-direction: column;
-	margin: 1rem;
+	width: 90%;
 	line-height: 1.5;
 	font-size: 16px;
-	overflow-x: initial;
 }
 
 .trip_box {
@@ -823,11 +845,11 @@ nav li {
 
 .imgBlock {
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
-	width: 50%;
+	width: 65%;
 	float: right;
-	margin-left: 25%;
-	margin-right: -12%;
+	margin-right: -6%;
 }
 
 .trip a:active {
@@ -860,11 +882,13 @@ nav li {
 
 .pic2 {
 	background-image: url(/assets/lum.jpg);
-	height: 15rem;
-	max-width: 400px;
-	margin-top: -5rem;
-	rotate: 12deg;
-	aspect-ratio: 3/2;
+    height: 15rem;
+    max-width: 400px;
+    position: relative;
+    margin-left: 5rem;
+    margin-top: -5rem;
+    rotate: 12deg;
+    aspect-ratio: 3/2;
 }
 
 .pic2a {
@@ -874,16 +898,17 @@ nav li {
 	max-width: 340px;
 	min-width: 262px;
 	width: 60%;
-	margin-top: 6rem;
-	right: 30rem;
+	margin-top: -2rem;
+	margin-bottom: 2.5vh;
 	rotate: -5deg;
-	aspect-ratio: 1;
+
 }
 
 .pic3_box {
 	display: flex;
 	flex-direction: column;
 	align-items: end;
+	width: 80%;
 }
 
 .pic3 {
@@ -892,7 +917,7 @@ nav li {
 	background-size: cover;
 	height: 400%;
 	width: 50%;
-	margin-right: 5rem;
+	margin-right: 0rem;
 	float: left;
 }
 
@@ -951,13 +976,15 @@ nav li {
 }
 
 .tagline {
-text-align: center;
-margin: 2rem;
+	text-align: center;
+	color: antiquewhite;
+	margin: 2rem;
 }
 
-.tagline a:link, .tagline a:visited{
-text-decoration: none;
-color: #00b5ef;
+.tagline a:link,
+.tagline a:visited {
+	text-decoration: none;
+	color: var(--primary_link);
 }
 
 .about {
@@ -994,7 +1021,7 @@ color: #00b5ef;
 footer {
 	display: flex;
 	font-size: small;
-	position: absolute;
+	position: fixed;
 	color: var(--active);
 	align-items: center;
 	justify-content: end;
