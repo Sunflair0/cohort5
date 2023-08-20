@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols&family=Mulish&family=Roboto&family=Kumar+One+Outline&family=Oswald&family=Open+Sans&family=Playfair:wght@600&display=swap');
 @import url('https://fonts.cdnfonts.com/css/embroidery');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Noto+Sans+Symbols&family=Open+Sans&family=Roboto&family=Oswald&family=Playfair+Display&display=swap');
 
 :root {
 	--primary_link: #00b5ef;
@@ -22,8 +22,8 @@ html {
 }
 
 body {
-display: flex;
-flex-direction: column;
+	display: flex;
+	flex-direction: column;
 	background-image: linear-gradient(30deg, var(--background1) -15%,
 			var(--background2) 35%);
 	color: var(--third_color);
@@ -34,10 +34,15 @@ body::-webkit-scrollbar {
 	width: 0px;
 }
 
+.btn_style {
+	font-family: 'Inter';
+}
+
 header {
-display: flex;
-flex-direction: column;
-position: relative;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	margin-bottom: 2vh;
 }
 
 #full {
@@ -62,8 +67,9 @@ position: relative;
 	border-right: 2px solid var(--background1);
 	left: 0;
 	overflow: hidden;
-	margin-top: 2vh;
+	margin-top: 0.5vh;
 	height: 96vh;
+	height: clamp(144vh, 1vw, 96vh);
 	box-shadow: inset -10px 30px 10px rgba(25, 9, 2, 0.085),
 		inset -1px 18px 2px rgba(203, 179, 179, 0.182),
 		inset 12px -40px 17px rgba(0, 0, 0, 0.153);
@@ -74,9 +80,9 @@ position: relative;
 }
 
 #logo_head {
-display: flex;
-position: fixed;
-max-width: 100%;
+	display: flex;
+	position: fixed;
+	max-width: 100%;
 	height: 2rem;
 	margin-top: 4rem;
 	margin-left: 1rem;
@@ -91,7 +97,7 @@ max-width: 100%;
 
 svg {
 	height: clamp(90px, 0.5vw, 207px);
-	padding: 12px;
+	padding: clamp(0.5vw, 1.5vw, .2vw);
 	max-width: 80%;
 }
 
@@ -110,7 +116,7 @@ svg {
 }
 
 #body_project {
-margin-top: 5vh;
+	margin-top: 5vh;
 	background: linear-gradient(180deg, transparent 90%, transparent 90%, rgb(23, 4, 118) 91%, rgb(41, 15, 90) 50%), linear-gradient(30deg, var(--background1) -15%, var(--background2) 35%);
 	overflow: hidden;
 	color: var(--secondary_color);
@@ -126,12 +132,12 @@ margin-top: 5vh;
 }
 
 nav {
-	font-family: "Playfair", Georgia, 'Times New Roman', Times, serif;
 	text-transform: uppercase;
 	font-size: clamp(0.75em, 3.5vw, 1.25em);
 }
 
 nav a {
+	font-family: 'Playfair';
 	border-bottom: transparent solid .15em;
 	border-top: transparent solid .15em;
 	transition: .3s all;
@@ -180,18 +186,19 @@ nav li {
 }
 
 .penta {
-clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+	clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
 }
 
 .hexa {
-  width: 320px;
-  height: 277.12px; /* width * 0.866 */
+	width: 320px;
+	height: 277.12px;
+	/* width * 0.866 */
 
-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+	clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
 }
 
 .hepta {
-clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+	clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
 }
 
 /* rgb(76, 101, 130) */
@@ -407,14 +414,14 @@ clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20
 	left: 2rem;
 }
 
-.project {
-margin: 22vh auto 0;
-
-}
 .projects {
-margin-top: 12vh;
+	margin-top: 11vh;
 }
 
+.projects p {
+	margin-top: 4vh;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
 .projects a:link,
 .projects a:visited {
@@ -426,6 +433,7 @@ margin-top: 12vh;
 	display: flex;
 	position: absolute;
 }
+
 
 .noise {
 	display: flex;
@@ -496,7 +504,7 @@ margin-top: 12vh;
 	height: 5rem;
 	width: 5rem;
 	margin: 0 5rem;
-	bottom: 4vh;
+	bottom: 6.5vh;
 	right: .5rem;
 	z-index: 5;
 	animation: bobbing 4.5s infinite ease-in;
@@ -584,10 +592,6 @@ margin-top: 12vh;
 	}
 }
 
-.projects p {
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
 #spacer {
 	display: flex;
 	position: absolute;
@@ -607,9 +611,9 @@ margin-top: 12vh;
 }
 
 #plant {
-height: 7rem;
-width: 10rem;
-border: 2px yellow solid;
+	height: 7rem;
+	width: 10rem;
+	border: 2px yellow solid;
 	display: flex;
 	position: absolute;
 	bottom: 9vh;
@@ -620,6 +624,7 @@ border: 2px yellow solid;
 .websites {
 	display: flex;
 	justify-content: space-between;
+    margin-top: 4vh;
 	width: 95%;
 	transition: .15s ease;
 }
@@ -633,7 +638,7 @@ border: 2px yellow solid;
 		repeating-conic-gradient(rgb(117, 116, 120) .5deg, rgb(255, 255, 255) .60deg);
 	aspect-ratio: 1;
 	height: fit-content;
-	width: clamp(50px, 10vw, 100px);
+	width: clamp(50px, 7vw, 100px);
 	box-shadow: 5px 5px 15px black;
 	border-radius: 10%;
 	border: rgb(121, 121, 121) 3px solid;
@@ -992,11 +997,10 @@ border: 2px yellow solid;
 }
 
 .tagline {
-display: flex;
-/* position: absolute; */
+	font-family: 'Roboto', sans-serif;
 	text-align: left;
 	color: antiquewhite;
-	margin: 2rem;
+	margin: 0 4rem;
 }
 
 .tagline a:link,
@@ -1006,6 +1010,10 @@ display: flex;
 }
 
 .about {
+	margin: 20vh auto 0;
+}
+
+.leathers {
 	display: flex;
 	position: relative;
 	width: calc(100%-2px);
@@ -1021,11 +1029,12 @@ display: flex;
 	display: flex;
 	position: relative;
 	justify-content: center;
-font-family: "Noto Sans Symbols", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, sans-serif;
-line-height: 1.4;
-	color: var(--inset_border);
+	font-size: clamp(14px, 2vw, 17px);
+	font-family: "Noto Sans Symbols", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, sans-serif;
+	line-height: 1.4;
 	margin: 12vh 2vw;
-	width: 250px;
+	width: 30vw;
+	max-width: 370px;
 	height: 30vh;
 	border: 4px solid rgb(236, 197, 113);
 	border-radius: 10px;
@@ -1042,38 +1051,32 @@ line-height: 1.4;
 .about_card2::before {
 	content: "";
 	position: absolute;
-	top: -4.2rem;
+	top: -24.7%;
 	clip-path: polygon(50% 30%, 0% 100%, 100% 100%);
-	width: 175px;
-	height: 75px;
+	width: 55%;
+	height: 25%;
 	background: var(--primary_link);
 }
 
 .about_card::after {
 	content: "🏕";
-	display: flex;
-	position: absolute;
-	font-size: xx-large;
-	top: -4rem;
-	clip-path: polygon(50% 30%, 0% 100%, 100% 100%);
-	justify-content: center;
-	align-items: self-end;
-	width: 175px;
-	height: 75px;
-	background-color: #ecb670;
 }
 
 .about_card2::after {
 	content: "🎯";
+}
+
+.about_card::after,
+.about_card2::after {
 	display: flex;
 	position: absolute;
 	font-size: xx-large;
-	top: -4rem;
+	top: -23.2%;
 	clip-path: polygon(50% 30%, 0% 100%, 100% 100%);
 	justify-content: center;
 	align-items: self-end;
-	width: 175px;
-	height: 75px;
+	width: 55%;
+	height: 25%;
 	background-color: #ecb670;
 }
 
