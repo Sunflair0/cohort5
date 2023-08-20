@@ -75,3 +75,16 @@ function removeBubbles(bubbleStream) {
 		clearTimeout(bubbleStream);
 	}
 }
+
+const one = document.querySelector('#four');
+
+
+four.addEventListener('click', clickTurn);
+
+
+function clickTurn() {
+
+four.classList.remove('four');
+four.classList.add('fourA');
+
+}
