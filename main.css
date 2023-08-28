@@ -1002,13 +1002,13 @@ a.dry_towel {
 	margin-top: -2rem;
 	margin-bottom: 2.5vh;
 	rotate: -5deg;
-z-index: -1;
+	z-index: -1;
 }
 
-.pic3_box {
+.pic3_box, .pic4_box {
 	display: flex;
 	flex-direction: column;
-	align-items: end;
+	justify-content: center;
 	width: 90%;
 }
 
@@ -1016,11 +1016,10 @@ z-index: -1;
 	display: flex;
 	background-image: url(/assets/uno.png);
 	background-size: cover;
+	margin: auto;
 	height: 35vh;
 	width: 100%;
 	max-width: 500px;
-	margin-right: 0rem;
-	float: right;
 }
 
 .img3_box {
@@ -1064,13 +1063,12 @@ z-index: -1;
 .pic4 {
 	position: absolute;
 	background-image: url(/assets/geokey.jpg);
-	height: 15rem;
+	height: 17rem;
 	width: clamp(270px, 2vw, 340px);
 	margin: -5rem -9rem;
-	left: 6%;
 	rotate: -5deg;
 	float: right;
-z-index: -1;
+	z-index: -1;
 }
 
 .speaker {
