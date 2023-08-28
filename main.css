@@ -443,7 +443,7 @@ nav li {
 
 .projects,
 .concepts {
-	margin-top: 17vh;
+	margin-top: 15vh;
 }
 
 .projects p,
@@ -482,12 +482,16 @@ nav li {
 	opacity: .6;
 	bottom: 1.7vh;
 }
-
+a.dry_towel {
+color: black;
+text-shadow: 2px 2px 1px #f3f3f3;
+}
 .dry_towel {
 	display: flex;
 	position: absolute;
 	font-family: 'Embroidery', sans-serif;
 	text-decoration: none;
+text-shadow: 2px 2px 1px #f3f3f3;
 	font-weight: 900;
 	font-size: larger;
 	padding-top: 1rem;
@@ -678,25 +682,24 @@ nav li {
 .plant::before {
 	content: "";
 	position: absolute;
-	height: 150%;
+	height: 200%;
 	width: 30.2%;
-	border: rgb(230, 201, 56) 2px solid;
+	border: rgb(230, 201, 56) 3px solid;
 	border-radius: 70%;
 	transform: skewY(5deg);
 	transform: translate(-68px, 90px);
-	margin: 0 50px;
+	margin: -21px 15px;
 	z-index: 2;
-	background-image: repeating-linear-gradient(rgb(68, 77, 9) 10%, rgb(44, 51, 7) 10%, rgb(68, 77, 9) 50%),
-		linear-gradient(45deg, rgb(198, 206, 140) 0%, rgb(44, 51, 7) 10%);
+	background-image: repeating-linear-gradient(rgb(60, 66, 16) 0 8px, rgb(37, 43, 10) 16px 24px, rgb(69, 77, 20) 30px 32px);
 }
 
 .plant::after {
 	content: "";
 	height: 250%;
-	width: 60%;
-	border: rgb(230, 201, 56) 3px solid;
+	width: 65%;
+	border: rgb(241, 206, 26) 3px solid;
 	border-radius: 70%;
-	transform: translate(-5px, 15px);
+	transform:  translate(-5px, 15px)skew(-2deg,10deg);
 	background-image: repeating-linear-gradient(rgb(68, 77, 9) 0 8px, rgb(44, 51, 7) 16px 24px, rgb(68, 77, 9) 30px 32px);
 }
 
