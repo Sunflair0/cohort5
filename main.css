@@ -1,5 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/embroidery');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Lora:ital,wght@1,500&family=Noto+Sans+Symbols&family=Open+Sans&family=Roboto&family=Oswald&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Inter:wght@500&family=Lora:ital,wght@1,500&family=Noto+Sans+Symbols&family=Open+Sans&family=Roboto&family=Oswald&family=Playfair+Display&display=swap');
 
 :root {
 	--primary_link: #00b5ef;
@@ -72,15 +72,65 @@ header {
 	left: 0;
 	overflow: hidden;
 	margin-top: 0.5vh;
-	height: 96vh;
-	height: clamp(144vh, 1vw, 96vh);
+	height: 107vh;
+	/* height: clamp(144vh, 1vw, 96vh); */
 	box-shadow: inset -10px 30px 10px rgba(25, 9, 2, 0.085),
 		inset -1px 18px 2px rgba(203, 179, 179, 0.182),
 		inset 12px -40px 17px rgba(0, 0, 0, 0.153);
 	background: linear-gradient(180deg, hsla(0, 0%, 0%, 0.65) 50%, hsla(0, 0%, 0%, 0.6) 60%);
 	width: clamp(28%, 2vw, 207px);
-	max-width: 187px;
+	max-width: 170px;
 	z-index: 3;
+	/* animation: logo 9s linear infinite; */
+}
+.logo_repeat2 {
+	display: flex;
+	position: fixed;
+	flex-direction: column;
+	border-right: 2px solid var(--background1);
+	left: 0;
+	overflow: hidden;
+	margin-top: 0.5vh;
+	height: 107vh;
+	/* height: clamp(144vh, 1vw, 96vh); */
+	box-shadow: inset -10px 30px 10px rgba(25, 9, 2, 0.085),
+		inset -1px 18px 2px rgba(203, 179, 179, 0.182),
+		inset 12px -40px 17px rgba(0, 0, 0, 0.153);
+	background: linear-gradient(180deg, hsla(0, 0%, 0%, 0.65) 50%, hsla(0, 0%, 0%, 0.6) 60%);
+	width: clamp(28%, 2vw, 207px);
+	max-width: 170px;
+	z-index: 3;
+	/* animation: logo 9s 4.9s linear infinite; */
+}
+.logo_repeat3 {
+	display: flex;
+	position: fixed;
+	flex-direction: column;
+	border-right: 2px solid var(--background1);
+	left: 0;
+	overflow: hidden;
+	margin-top: 0.5vh;
+	height: 107vh;
+	/* height: clamp(144vh, 1vw, 96vh); */
+	box-shadow: inset -10px 30px 10px rgba(25, 9, 2, 0.085),
+		inset -1px 18px 2px rgba(203, 179, 179, 0.182),
+		inset 12px -40px 17px rgba(0, 0, 0, 0.153);
+	background: linear-gradient(180deg, hsla(0, 0%, 0%, 0.65) 50%, hsla(0, 0%, 0%, 0.6) 60%);
+	width: clamp(28%, 2vw, 207px);
+	max-width: 170px;
+	z-index: 3;
+	animation: logo 9s 14.1s linear infinite;
+}
+
+@keyframes logo {
+	from {
+		transform: translateY(100%);
+	}
+
+	to {
+		transform: translateY(0%);
+	}
+
 }
 
 #logo_head {
@@ -103,6 +153,7 @@ svg {
 	height: clamp(90px, 0.5vw, 207px);
 	padding: clamp(0.5vw, 1.5vw, .2vw);
 	max-width: 80%;
+	margin: auto;
 }
 
 .line_logo {
@@ -1005,7 +1056,8 @@ a.dry_towel {
 	z-index: -1;
 }
 
-.pic3_box, .pic4_box {
+.pic3_box,
+.pic4_box {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -1234,6 +1286,8 @@ a.dry_towel {
 .speaker_card::before {
 	content: attr(data-title);
 	position: absolute;
+	font-family: "Fredericka the Great";
+	font-size: 18px;
 	width: 80%;
 	top: 60%;
 	left: 10%;
@@ -1306,7 +1360,6 @@ a.dry_towel {
 	flex-wrap: wrap;
 	width: 75%;
 	justify-content: center;
-
 	border: #fda839 1px solid;
 	background: hsla(206, 85%, 5%, 0.368);
 	font-size: large;
