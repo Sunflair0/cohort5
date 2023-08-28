@@ -1,8 +1,3 @@
-function blink() {
-	let star = document.getElementById("star");
-	star.classList.toggle("star_blink");
-}
-
 // playVideo to desend video and play,
 // retractVideo to restrict eventlistener to just video container 
 //and teapot illusion link
@@ -38,17 +33,17 @@ const mbubble = document.querySelectorAll(".mbubble");
 const duck = document.querySelector("#duck_bubble_starter");
 
 if (duck) {
-		duck.addEventListener("mouseover", addBubbles);
-	}
+	duck.addEventListener("mouseover", addBubbles);
+}
 
 function addBubbles() {
-	bubble.forEach((elem) => {
-		console.log(elem);
-		elem.classList.add('bubbles');
+	bubble.forEach((bubble) => {
+		console.log(bubble);
+		bubble.classList.add('bubbles');
 	});
-	mbubble.forEach((elem) => {
-		console.log(elem);
-		elem.classList.add('bubbles2');
+	mbubble.forEach((bubble) => {
+		console.log(bubble);
+		bubble.classList.add('bubbles2');
 	});
 	if (duck) {
 		duck.addEventListener("mouseout", delayBubbleFade);
@@ -62,11 +57,11 @@ function delayBubbleFade() {
 }
 
 function removeBubbles(bubbleStream) {
-	bubble.forEach((elem) => {
-		elem.classList.remove('bubbles');
+	bubble.forEach((bubble) => {
+		bubble.classList.remove('bubbles');
 	});
-	mbubble.forEach((elem) => {
-		elem.classList.remove('bubbles2');
+	mbubble.forEach((bubble) => {
+		bubble.classList.remove('bubbles2');
 	});
 
 	if (duck) {
@@ -76,15 +71,17 @@ function removeBubbles(bubbleStream) {
 	}
 }
 
-const one = document.querySelector('#four');
+// meme pop up when wet towel is doubleclicked
 
+const wet = document.querySelector("#wet");
 
-four.addEventListener('click', clickTurn);
+if (wet) {
+	wet.addEventListener('dblclick', popMeme);
+}
 
-
-function clickTurn() {
-
-four.classList.remove('four');
-four.classList.add('fourA');
-
+function popMeme() {
+	document.querySelector(".wet").style.opacity = "1";
+	setTimeout(() => {
+		document.querySelector(".wet").style.opacity = "0";
+	}, 3000);
 }

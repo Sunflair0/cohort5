@@ -482,16 +482,18 @@ nav li {
 	opacity: .6;
 	bottom: 1.7vh;
 }
+
 a.dry_towel {
-color: black;
-text-shadow: 2px 2px 1px #f3f3f3;
+	color: black;
+	text-shadow: 2px 2px 1px #f3f3f3;
 }
+
 .dry_towel {
 	display: flex;
 	position: absolute;
 	font-family: 'Embroidery', sans-serif;
 	text-decoration: none;
-text-shadow: 2px 2px 1px #f3f3f3;
+	text-shadow: 2px 2px 1px #f3f3f3;
 	font-weight: 900;
 	font-size: larger;
 	padding-top: 1rem;
@@ -536,12 +538,26 @@ text-shadow: 2px 2px 1px #f3f3f3;
 	bottom: 1rem;
 	border-radius: 23% 47% 0 0;
 	overflow: hidden;
+	cursor: pointer;
+}
+
+.wet {
+	position: absolute;
+	background-image: url(assets/meme.png);
+	background-size: cover;
+	opacity: 0;
+	inset: 0;
+	margin: auto;
+	height: 50vh;
+	aspect-ratio: 125/154;
+	z-index: 10;
+	transition: .3s all;
 }
 
 .duck {
 	display: flex;
 	position: absolute;
-	background-image: url(/assets/duck.png);
+	background-image: url(assets/duck.png);
 	background-size: cover;
 	height: clamp(4rem, 13vh, 4.5rem);
 	width: 5rem;
@@ -550,10 +566,6 @@ text-shadow: 2px 2px 1px #f3f3f3;
 	right: 1rem;
 	z-index: 5;
 	animation: bobbing 4.5s infinite ease-in;
-
-	/* @media screen and (max-height: 600px) {
-		height: 4rem;
-	} */
 }
 
 .wall {
@@ -625,6 +637,16 @@ text-shadow: 2px 2px 1px #f3f3f3;
 	/* @media screen and (max-height: 600px) {
 		height: clamp(3.5rem, 8vh + .1em, 5rem);
 	} */
+}
+
+.tub::after {
+	content: "";
+	position: absolute;
+	background: white;
+	height: 2rem;
+	width: 2rem;
+	right: 0rem;
+	bottom: .5rem;
 }
 
 @keyframes bobbing {
@@ -699,7 +721,7 @@ text-shadow: 2px 2px 1px #f3f3f3;
 	width: 65%;
 	border: rgb(241, 206, 26) 3px solid;
 	border-radius: 70%;
-	transform:  translate(-5px, 15px)skew(-2deg,10deg);
+	transform: translate(-5px, 15px)skew(-2deg, 10deg);
 	background-image: repeating-linear-gradient(rgb(68, 77, 9) 0 8px, rgb(44, 51, 7) 16px 24px, rgb(68, 77, 9) 30px 32px);
 }
 
