@@ -61,19 +61,16 @@
 		</a>
 	</header>
 	<div class="concepts">
-	<div class="wet"></div>	
-		<p class="tagline">These are some coding concepts that we covered in camp. They 
+		<div class="wet"></div>
+		<p class="tagline"><span id="tagline_first">Here are some coding ideas that we covered in camp. </span>They are just a drop in the bucket, but
+			are a good place to start when laying good basis.
 		</p>
-		<p class="tagline">One student remarked how she thought coding would be harder and that she would have to know a
-			lot of math to be good at it, but she now understood it is just a bunch of detailed work. Most all of the
-			students expressed they intended to keep coding in their future in some respect.
-		</p>
-		<p class="tagline">Below the project buttons is a bathroom scene that holds some of the coding prinicples we
-			covered in the class. Feel free to explore them.</p>
+		<p class="tagline">Hover or click on the items below to discover the concepts.</p>
 
+		<p class="tagline">The scene below is entirely CSS generated, except for the duck image.</p>
 		<svg>
 			<filter id="water" x="0" y="0" width="100%" height="100%">
-				<feTurbulence stitchTiles="noStitch" baseFrequency="10" numOctaves="5" result="NOISE" id="turbulence" />
+				<feTurbulence baseFrequency="10" numOctaves="5" result="NOISE" id="turbulence" />
 				<feDisplacementMap in="SourceGraphic" scale="10.5" />
 				<animate xlink:href="#turbulence" attributeName="baseFrequency" dur="90s" keyTimes="0;.5;1"
 					values="0.02 0.01; 0.02 3; 0.02 0.01" repeatCount="indefinite" />
@@ -127,18 +124,18 @@
 			</div>
 			<div class="water">
 			</div>
-		
-		<div id="plant">
-			<div class="plant">
+
+			<div id="plant">
 				<div class="plant">
-					<div class="plant" style="transform:translate3d(-10px, 110px, 0); z-index: 5;"></div>
-					<div class="plant" style="transform: translate(0, 130px);">
-						<div class="plant" style="transform: rotateY(-150deg) translate(110px, 50px);"></div>
+					<div class="plant">
+						<div class="plant" style="transform:translate3d(-10px, 110px, 0); z-index: 5;"></div>
+						<div class="plant" style="transform: translate(0, 130px);">
+							<div class="plant" style="transform: rotateY(-150deg) translate(110px, 50px);"></div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-</section>
+		</section>
 	</div>
 	<footer>&copy; Copyright 2023</footer>
 	<script src="main.js"></script>
