@@ -137,6 +137,13 @@ svg {
 	max-width: 80%;
 	margin: auto;
 }
+	
+.line_logo{
+fill: var(--primary_link);
+stroke: var(--primary_link);
+	stroke-width: 3px;
+	stroke-linejoin: round;
+}
 
 .outline_logo:hover {
 	fill: var(--primary_link);
