@@ -39,7 +39,6 @@ body {
 	color: var(--third_color);
 }
 
-
 body::-webkit-scrollbar {
 	width: 0px;
 }
@@ -78,14 +77,14 @@ header {
 	left: 0;
 	overflow: hidden;
 	/* margin-top: 0.5vh; */
-	height: 120vh;
-transform: translateY(-10%);
+	height: 20in;
+	transform: translateY(-10%);
 	/* height: clamp(144vh, 1vw, 96vh); */
 	box-shadow: inset -10px 30px 10px rgba(25, 9, 2, 0.085),
 		inset -1px 18px 2px rgba(203, 179, 179, 0.182),
 		inset 12px -40px 17px rgba(0, 0, 0, 0.153);
 	background: linear-gradient(180deg, hsla(0, 0%, 0%, 0.65) 50%, hsla(0, 0%, 0%, 0.6) 60%);
-	width: clamp(28%, 2vw, 207px);
+	width: clamp(18%, 2vw, 207px);
 	max-width: 170px;
 	z-index: 3;
 }
@@ -124,13 +123,8 @@ svg {
 	margin: auto;
 }
 
-.line_logo {
+.outline_logo:hover {
 	fill: var(--primary_link);
-	stroke: var(--primary_link);
-	stroke-width: 3px;
-	stroke-linejoin: round;
-height: 100%;
-margin-top: -10vh;
 }
 
 .outline_logo {
@@ -138,9 +132,8 @@ margin-top: -10vh;
 	stroke: var(--primary_link);
 	stroke-width: 3px;
 	stroke-linejoin: round;
-height: 100%;
-
-padding: 3px auto;
+	height: 100%;
+	padding: 3px auto;
 	animation: logo 10s linear infinite;
 }
 
@@ -450,11 +443,13 @@ nav li {
 
 .index p {
 	display: flex;
-	position: relative;
-	font-size: clamp(10px, 1.5vw, 12px);
-	margin-top: clamp(-1.5em, -3.5vw, -1em);
-	margin-right: 4%;
-	justify-content: right;
+	position: fixed;
+color: rgba(240, 164, 93, 0.1);
+	font-size: 4rem;
+rotate: 90deg;
+right: 10%;
+bottom: 45%;
+
 }
 
 .index a:link {
@@ -1503,9 +1498,9 @@ footer {
 	color: var(--active);
 	align-items: center;
 	justify-content: end;
-	padding: .1rem .5rem;
+	padding: .2rem .5rem;
 	height: 1.2em;
-	width: calc(100% - 1rem);
+	width: 100% ;
 	background-color: rgb(0, 0, 0);
 	border-top: var(--background1) 2px solid;
 	border-bottom: 4px solid black;
