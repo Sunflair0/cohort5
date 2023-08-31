@@ -249,6 +249,7 @@ nav li {
 	margin-top: 10rem;
 	right: -10rem;
 direction: rtl;
+ filter:drop-shadow(0px 0px 5px #99560595) drop-shadow(0px 0px 3px rgb(209, 123, 17));
 	/* disable white space between inline block element */
 }
 
@@ -311,20 +312,6 @@ position: absolute;
 	background-position: center bottom;
 	object-fit: cover;
 	animation: slideshow 36s calc(1s * var(--j)) linear infinite;
-
-	@media screen and (min-width: 950px) {
-		top: -6vh;
-	}
-
-	@media screen and (min-width: 1240px) {
-		top: -11vh;
-	}
-
-	@media screen and (min-width: 1500px) {
-		top: -15vh;
-
-	}
-
 }
 
 
