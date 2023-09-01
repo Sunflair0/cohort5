@@ -16,7 +16,7 @@
 	--leather: #532a0a;
 
 	/* calculations from https://css-tricks.com/hexagons-and-beyond-flexible-responsive-grid-patterns-sans-media-queries/ */
-	--s: 200px;
+	--s: 175px;
 	/* size  */
 	--r: 1;
 	/* ratio */
@@ -30,6 +30,16 @@
 	--mh: calc(var(--m) + (var(--s) - 2*var(--hc))/2);
 	/* horizontal margin */
 	--f: calc(2*var(--s) + 4*var(--m) - 2*var(--vc) - 2px);
+
+
+	@media screen and (max-width: 850px) {
+		--s: 130px;
+	}
+
+	@media screen and (min-width: 1450px) {
+		--s: 225px;
+		--vc: 70px;
+	}
 }
 
 * {
@@ -137,16 +147,17 @@ svg {
 	max-width: 80%;
 	margin: auto;
 }
-	
-.line_logo{
-fill: var(--primary_link);
-stroke: var(--primary_link);
+
+.line_logo {
+	fill: var(--primary_link);
+	stroke: var(--primary_link);
 	stroke-width: 3px;
 	stroke-linejoin: round;
 }
 
 .outline_logo:hover {
 	fill: var(--primary_link);
+background: url(https://aiminstitute.org/);
 }
 
 .outline_logo {
@@ -249,15 +260,17 @@ nav li {
 }
 
 .honeycomb {
+	position: relative;
 	font-size: 0;
 	height: 50vh;
-	width: 80vw;
-	position: relative;
-	margin-top: 10rem;
-	right: -10rem;
-direction: rtl;
- filter:drop-shadow(0px 0px 5px #99560595) drop-shadow(0px 0px 3px rgb(209, 123, 17));
+	width: 76vw;
+	margin: 8rem auto 0;
+	left: 25%;
+	bottom: 0;
+	direction: rtl;
+	filter: drop-shadow(0px 0px 5px #99560595) drop-shadow(0px 0px 3px rgb(209, 123, 17));
 	/* disable white space between inline block element */
+
 }
 
 .honeycomb div {
@@ -265,6 +278,7 @@ direction: rtl;
 	margin: var(--m);
 	height: calc(var(--s) * 1.1547);
 	display: inline-block;
+	inset: 0;
 	font-size: initial;
 	clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
 	margin-bottom: calc(var(--m) - var(--s) * 0.2885);
@@ -280,7 +294,7 @@ direction: rtl;
 
 .slideshow_images::after {
 	content: "";
-position: absolute;
+	position: absolute;
 	background-color: rgb(241, 239, 207);
 	transform: scale(1.055);
 }
@@ -291,23 +305,9 @@ position: absolute;
 	width: 40%;
 	margin: 10px;
 	position: relative;
-	background-color: #532a0a;
 	/* aspect-ratio: 5/4.32; */
 	/* background-size: 50%; */
 	filter: brightness(50%);
-
-	@media screen and (min-width: 950px) {
-		max-width: 75%;
-	}
-
-	@media screen and (min-width: 1240px) {
-		max-width: 85%;
-	}
-
-	@media screen and (min-width: 1500px) {
-		max-width: 90%;
-		top: -30vh;
-	}
 }
 
 .slideshow_images>img {
@@ -344,14 +344,16 @@ position: absolute;
 	overflow: hidden;
 }
 
-.index p {
+.watermark {
+	background-repeat: repeat;
 	display: flex;
 	position: fixed;
 	color: rgba(240, 164, 93, 0.1);
 	font-size: 4rem;
-	rotate: 90deg;
-	right: 10%;
-	bottom: 45%;
+	rotate: 45deg;
+	right: 15%;
+	height: 94vh;
+	bottom: -40%;
 
 }
 
@@ -422,7 +424,7 @@ position: absolute;
 	transform: translate(0px, 50px);
 	backdrop-filter: blur(3px);
 	border-radius: 50%;
-	animation: bubbles 1s forwards linear;
+	animation: bubbles 1.5s forwards linear;
 	animation-delay: calc(.22s * var(--i));
 }
 
@@ -552,7 +554,7 @@ a.dry_towel {
 		5px 5px 20px black;
 	margin-left: 3rem;
 	overflow: hidden;
-	bottom: 12vh;
+	bottom: 14vh;
 	z-index: 5;
 }
 
@@ -603,7 +605,7 @@ a.dry_towel {
 	height: clamp(4rem, 13vh, 4.5rem);
 	width: 5rem;
 	margin: 0 5rem;
-	bottom: 5.5vh;
+	bottom: 4.5vh;
 	right: 1rem;
 	z-index: 5;
 	animation: bobbing 4.5s infinite ease-in;
@@ -643,7 +645,7 @@ a.dry_towel {
 .tub {
 	display: flex;
 	position: absolute;
-	clip-path: polygon(78% 11%, 90% 14%, 100% 21%, 100% 70%, 78% 45%, 22% 45%, 0 70%, 0 21%, 10% 14%, 22% 11%);
+	clip-path: polygon(78% 11%, 90% 14%, 100% 26%, 100% 67%, 36% 45%, 22% 45%, 0 70%, 0 21%, 10% 14%, 22% 11%);
 	background: radial-gradient(ellipse, transparent 70%, rgb(140, 140, 140) 75% 90%, rgb(252, 252, 252) 100%),
 		linear-gradient(black 0%, rgb(255, 255, 255) 32%);
 	width: 100%;
@@ -678,16 +680,6 @@ a.dry_towel {
 	/* @media screen and (max-height: 600px) {
 		height: clamp(3.5rem, 8vh + .1em, 5rem);
 	} */
-}
-
-.tub::after {
-	content: "";
-	position: absolute;
-	background: white;
-	height: 2rem;
-	width: 2rem;
-	right: 0rem;
-	bottom: .5rem;
 }
 
 @keyframes bobbing {
@@ -745,10 +737,12 @@ a.dry_towel {
 	content: "";
 	position: absolute;
 	height: 200%;
-	width: 30.2%;
-	border: rgb(230, 201, 56) 3px solid;
+	width: 32%;
+	border: rgb(230, 201, 56) 4px solid;
+	outline: 2px solid rgba(14, 78, 14, 0.75);
+	outline-offset: -4px;
 	border-radius: 70%;
-	transform: skewY(5deg);
+	box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.7);
 	transform: translate(-68px, 90px);
 	margin: -21px 15px;
 	z-index: 2;
@@ -757,12 +751,15 @@ a.dry_towel {
 
 .plant::after {
 	content: "";
-	height: 250%;
-	width: 65%;
-	border: rgb(241, 206, 26) 3px solid;
-	border-radius: 70%;
+	height: 300%;
+	width: 55%;
+	border: rgb(230, 201, 56) 4px solid;
+	outline: 2px solid rgba(14, 78, 14, 0.75);
+	outline-offset: -4px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+	border-radius: 100%;
 	transform: translate(-5px, 15px)skew(-2deg, 10deg);
-	background-image: repeating-linear-gradient(rgb(68, 77, 9) 0 8px, rgb(44, 51, 7) 16px 24px, rgb(68, 77, 9) 30px 32px);
+	background-image: repeating-linear-gradient(rgb(68, 77, 9) 0 4px, rgb(44, 51, 7) 20px 24px, rgb(68, 77, 9) 30px 32px);
 }
 
 .websites {
@@ -1175,7 +1172,7 @@ a.dry_towel {
 	margin: 12vh 2vw;
 	width: 30vw;
 	max-width: 370px;
-	height: 30vh;
+	height: 44vh;
 	border: 4px solid rgb(236, 197, 113);
 	border-radius: 10px;
 	font-weight: bolder;
@@ -1254,6 +1251,28 @@ a.dry_towel {
 	border-radius: 10px;
 }
 
+.socials::before {
+	content: "";
+	position: absolute;
+	height: 14px;
+	width: 2px;
+	rotate: 45deg;
+	transform: translate(-29px, -5px);
+	background-color: rgba(198, 159, 87, 0.85);
+	box-shadow: 2px -2px 2px hsla(34, 87%, 41%, 0.5);
+}
+
+.socials::after {
+	content: "";
+	position: absolute;
+	height: 15px;
+	width: 1px;
+	rotate: 45deg;
+	transform: translate(414px, 106px);
+	background-color: rgba(10, 53, 172, 0.57);
+	box-shadow: 1px 1px 1px rgb(105, 163, 179);
+}
+
 .speaker_card {
 	display: flex;
 	position: relative;
@@ -1317,6 +1336,7 @@ a.dry_towel {
 	height: 55%;
 	border-radius: 10px 10px 0 0;
 	border-bottom: var(--background1) 1px solid;
+	box-shadow: -2px 2px 1px #0000008a;
 	background: linear-gradient(90deg,
 			rgba(1, 16, 92, 0.459) 40%,
 			var(--background1) 40%,
@@ -1374,7 +1394,7 @@ a.dry_towel {
 	align-items: center;
 	font-size: clamp(10px, 2vw, 15px);
 	padding: .25em;
-	width: 13%;
+	width: 20%;
 	top: 3%;
 	left: 0;
 	box-shadow: inset -1px 1px 2px rgb(51, 51, 51),
