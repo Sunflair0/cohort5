@@ -980,7 +980,7 @@ a.dry_towel {
 
 
 .pic1 {
-	background-image: url(/assets/aimMez.jpg);
+	background-image: url(assets/aimMez.jpg);
 	height: 20rem;
 	aspect-ratio: 1;
 	float: left;
@@ -988,7 +988,7 @@ a.dry_towel {
 }
 
 .pic2 {
-	background-image: url(/assets/lum.jpg);
+	background-image: url(assets/lum.jpg);
 	height: 15rem;
 	max-width: 400px;
 	position: relative;
@@ -999,7 +999,7 @@ a.dry_towel {
 }
 
 .pic2a {
-	background-image: url(/assets/game.jpg);
+	background-image: url(assets/game.jpg);
 	background-position: left;
 	height: 15rem;
 	max-width: 340px;
@@ -1021,7 +1021,7 @@ a.dry_towel {
 
 .pic3 {
 	display: flex;
-	background-image: url(/assets/uno.png);
+	background-image: url(assets/uno.png);
 	background-size: cover;
 	margin: auto;
 	height: 35vh;
@@ -1037,7 +1037,7 @@ a.dry_towel {
 }
 
 .pic3a {
-	background-image: url(/assets/KanekoStudySpace.jpg);
+	background-image: url(assets/KanekoStudySpace.jpg);
 	max-width: 200px;
 	height: 11rem;
 	height: clamp(7rem, 13vw, 11rem);
@@ -1048,7 +1048,7 @@ a.dry_towel {
 }
 
 .pic3b {
-	background-image: url(/assets/cpl.jpg);
+	background-image: url(assets/cpl.jpg);
 	max-width: 200px;
 	height: clamp(7rem, 13vw, 11rem);
 	rotate: 3deg;
@@ -1058,7 +1058,7 @@ a.dry_towel {
 }
 
 .pic3c {
-	background-image: url(/assets/organ.jpg);
+	background-image: url(assets/organ.jpg);
 	max-width: 200px;
 	height: clamp(7rem, 13vw, 11rem);
 	rotate: -4deg;
@@ -1069,7 +1069,7 @@ a.dry_towel {
 
 .pic4 {
 	position: absolute;
-	background-image: url(/assets/geokey.jpg);
+	background-image: url(assets/geokey.jpg);
 	height: 17rem;
 	width: clamp(270px, 2vw, 340px);
 	margin: -5rem -9rem;
