@@ -7,8 +7,8 @@ const video = document.querySelector(".video")
 let play = false;
 
 if (vid) {
-	vid.addEventListener('click', playVideo)
-};
+	vid.addEventListener('click', playVideo);
+}
 if (video) {
 	video.addEventListener('click', retractVideo)
 };
@@ -20,7 +20,7 @@ function retractVideo() {
 
 function playVideo() {
 	if (!play) {
-		video.style.transform = "translate(-50%,-50%)";
+		video.style.transform = "translate(-50%,-45%)";
 
 		play = true;
 	} else {
