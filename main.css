@@ -898,7 +898,7 @@ a.dry_towel {
 
 .trip_box {
 	display: flex;
-inset: 0 auto 30vh 5rem;
+	inset: 0 auto 30vh 5rem;
 	/* margin-top: 14vh;
 	margin-left: 5rem;
 	margin-bottom: 18vh; */
@@ -1384,7 +1384,7 @@ inset: 0 auto 30vh 5rem;
 }
 
 .socials a:hover {
-	background-color: var(--background1);
+	color: var(--background1);
 }
 
 footer {
