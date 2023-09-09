@@ -127,7 +127,7 @@ body::-webkit-scrollbar {
 
 header {
 	display: flex;
-	position: relative;
+	position: fixed;
 	align-items: center;
 	width: 100%;
 	height: 9vh;
@@ -534,8 +534,8 @@ nav li {
 }
 
 .projects,
-.concepts {
-	margin-top: 15vh;
+.concepts, .about {
+	margin-top: 7vh;
 }
 
 .projects p,
@@ -1165,10 +1165,6 @@ b #webs {
 	line-height: 1.33;
 }
 
-.about {
-	margin: 20vh auto 0;
-}
-
 .leathers {
 	display: flex;
 	position: relative;
@@ -1190,7 +1186,7 @@ b #webs {
 	font-size: clamp(15px, 2.3vw, 17px);
 	font-family: "Noto Sans Symbols", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, sans-serif;
 	line-height: 1.4;
-	margin: 12vh 2vw;
+	margin: 18vh 2vw;
 	width: clamp(270px, 37vw, 360px);
 	height: 42vh;
 	border: 4px solid rgb(236, 197, 113);
@@ -1238,19 +1234,14 @@ b #webs {
 }
 
 .speaker_line {
-	margin: 13% 1.5rem 0 4rem;
 	font-size: clamp(16px, 3vh, 30px);
-
-	@media screen and (min-width: 720px) {
-		margin: 10% 1.5rem 0 4rem;
-	}
-
 }
 
 .speakers {
 	display: flex;
 	flex-direction: column;
 	position: relative;
+margin-top: 7vh;
 }
 
 .speaker {
