@@ -534,7 +534,7 @@ nav li {
 }
 
 .projects,
-.concepts, .about {
+.concepts, .speakers, .about {
 	margin-top: 15vh;
 }
 
@@ -1241,7 +1241,6 @@ b #webs {
 	display: flex;
 	flex-direction: column;
 	position: relative;
-margin-top: 7vh;
 }
 
 .speaker {
