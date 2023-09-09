@@ -32,15 +32,53 @@
 	--f: calc(2*var(--s) + 4*var(--m) - 2*var(--vc) - 2px);
 
 
-	@media screen and (max-width: 850px) {
-		--s: 130px;
-		--vc: 30px;
-	}
 
 	@media screen and (min-width: 1450px) {
 		--s: 200px;
 		--vc: 60px;
 		--m: 7px;
+	}
+
+
+	@media screen and (max-width: 850px) {
+		--s: 130px;
+		--vc: 30px;
+	}
+
+	@media screen and (max-width: 680px) {
+		--s: 90px;
+		--vc: 20px;
+
+		.phone_view {
+			display: flex;
+
+		}
+
+		.line_logo {
+			stroke-width: 5px;
+		}
+
+		.speaker {
+			width: 50vw;
+		}
+
+		.speaker_card {
+			scale: 3;
+			margin: 35rem 1.5rem;
+		}
+
+		.honeycomb {
+			width: 80vw;
+		}
+
+		.honeycomb::before {
+			height: 70%;
+		}
+
+		.index .btn {
+			padding: 0.5em 2em;
+		}
+
 	}
 }
 
@@ -97,6 +135,10 @@ header {
 	height: 100vh;
 	right: 0;
 	bottom: 0;
+}
+
+.phone_view {
+	display: none;
 }
 
 .logo_repeat {
@@ -167,7 +209,7 @@ svg {
 	stroke-width: 3px;
 	stroke-linejoin: round;
 	height: 100%;
-	padding: 3px auto;
+	padding: 3px;
 	animation: logo 10s linear infinite;
 }
 
@@ -185,7 +227,7 @@ svg {
 
 nav {
 	text-transform: uppercase;
-	font-size: clamp(0.75em, 2.5vw, 1.25em);
+	font-size: clamp(0.6em, 2.5vw, 1.25em);
 }
 
 nav a {
@@ -1203,10 +1245,6 @@ a.dry_towel {
 	justify-content: center;
 	margin: 13vh auto 0;
 	width: 100vw;
-
-	@media screen and (max-height: 650px) {
-		width: 50vw;
-	}
 }
 
 .blur {
@@ -1222,6 +1260,7 @@ a.dry_towel {
 	position: relative;
 	flex-direction: row;
 	flex-wrap: wrap;
+	scale: 1;
 	box-shadow: inset 10px -7px 2px rgba(25, 12, 12, 0.5),
 		inset -7px 7px 2px rgba(149, 216, 230, 0.245),
 		7px -6px 2px rgba(29, 70, 79, 0.8),
@@ -1235,12 +1274,6 @@ a.dry_towel {
 	justify-content: center;
 	background: linear-gradient(rgba(14, 202, 235, 0.7) 0%, rgba(104, 225, 223, 0.25) 75%);
 	border: var(--background1) 1px solid;
-
-	@media screen and (max-width: 400px) {
-		scale: 2;
-		margin: 20vw;
-		margin-bottom: 20vh;
-	}
 }
 
 .speaker_card::before {
