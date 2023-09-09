@@ -43,15 +43,22 @@
 	@media screen and (max-width: 850px) {
 		--s: 130px;
 		--vc: 30px;
+
+		.websites {
+			margin: 5vh auto 0;
+		}
 	}
 
-	@media screen and (max-width: 680px) {
+	@media screen and (max-width: 400px) {
 		--s: 90px;
 		--vc: 20px;
 
+		.tagline {
+			font-size: 13.3px;
+		}
+
 		.phone_view {
 			display: flex;
-
 		}
 
 		.line_logo {
@@ -376,7 +383,6 @@ nav li {
 	right: 35%;
 	height: 94vh;
 	bottom: -30%;
-
 }
 
 .index a:link {
@@ -514,16 +520,7 @@ nav li {
 
 .projects p,
 .concepts p {
-	margin-top: 2.5vh;
-	font-size: clamp(14px, 2.5vh, 20px);
-}
-
-.projects p:nth-child(1) {
-	margin-top: 2.5rem;
-
-	@media screen and (max-height: 600px) {
-		margin: .5rem 3.8rem 2rem 10rem;
-	}
+	margin-top: clamp(.5rem, 2vh, 2.5rem);
 }
 
 .projects a:link,
@@ -536,6 +533,22 @@ nav li {
 .concepts h4 {
 	display: flex;
 	position: absolute;
+}
+
+#tagline_first {
+	color: var(--third_color);
+}
+
+#first_word {
+	color: var(--background1);
+}
+
+.tagline a:link,
+.tagline a:visited {
+	text-decoration: none;
+	color: var(--primary_link);
+	font-family: 'Roboto', sans-serif;
+	font-style: normal;
 }
 
 .noise {
@@ -740,7 +753,6 @@ a.dry_towel {
 	position: absolute;
 	bottom: 9vh;
 	left: 70%;
-
 }
 
 .plant::before {
@@ -772,7 +784,7 @@ a.dry_towel {
 	background-image: repeating-linear-gradient(rgb(68, 77, 9) 0 4px, rgb(44, 51, 7) 20px 24px, rgb(68, 77, 9) 30px 32px);
 }
 
-#webs {
+b #webs {
 	display: flex;
 	position: relative;
 	flex-wrap: wrap;
@@ -781,9 +793,10 @@ a.dry_towel {
 
 .websites {
 	display: flex;
+	inset: 0;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	margin-top: 11.5vh;
+	margin: 14vh auto 0;
 	width: 95%;
 	transition: .15s ease;
 }
@@ -903,9 +916,7 @@ a.dry_towel {
 }
 
 .speakers p {
-
 	font-family: "Kumar One Outline";
-	/* color: rgb(231, 251, 131); */
 	margin: 2rem;
 	text-shadow:
 		-4px -4px 6px rgba(234, 220, 14, 0.6),
@@ -1128,26 +1139,10 @@ a.dry_towel {
 	color: var(--background1);
 	text-shadow: #000000 4px 2px 2px;
 	margin: 4vh 4rem 0;
-	font-size: 22px;
+	font-size: clamp(16px, 2.5vh, 30px);
 	font-weight: 400;
 	font-style: italic;
 	line-height: 1.33;
-}
-
-#tagline_first {
-	color: var(--third_color);
-}
-
-#first_word {
-	color: var(--background1);
-}
-
-.tagline a:link,
-.tagline a:visited {
-	text-decoration: none;
-	color: var(--primary_link);
-	font-family: 'Roboto', sans-serif;
-	font-style: normal;
 }
 
 .about {
@@ -1268,7 +1263,6 @@ a.dry_towel {
 		30px -25px 2px rgba(1, 1, 48, 0.3);
 	width: 240px;
 	aspect-ratio: 3/5;
-
 	border-radius: 10px;
 	margin: 1.5rem;
 	justify-content: center;
