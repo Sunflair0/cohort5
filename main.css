@@ -960,7 +960,7 @@ b #webs {
 	flex-direction: column;
 	margin: 14vh 6rem 0;
 	line-height: 1.5;
-	font-size: clamp(12px 1.4vh, 16px);
+	font-size: clamp(12px, 1.4vh, 16px);
 }
 
 .trip p {
@@ -1198,6 +1198,11 @@ b #webs {
 	padding: 2em;
 	outline: 2px dashed var(--leather);
 	outline-offset: -8px;
+
+	@media screen and (max-height: 600px) {
+	height: 60%;
+}
+
 }
 
 .about_card::before,
