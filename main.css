@@ -542,7 +542,7 @@ nav li {
 	position: relative;
 	filter: url(#noise);
 	height: 22.5vh;
-	width: 8rem;
+	width: 100%;
 	opacity: .6;
 	bottom: 1.7vh;
 }

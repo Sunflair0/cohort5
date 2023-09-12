@@ -76,7 +76,7 @@ function removeBubbles(bubbleStream) {
 const wet = document.querySelector("#wet");
 
 if (wet) {
-	wet.addEventListener('dblclick', popMeme);
+	wet.addEventListener('click', popMeme);
 }
 
 function popMeme() {
