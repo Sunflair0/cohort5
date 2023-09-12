@@ -1483,6 +1483,10 @@ footer {
 		margin: 2rem 1.5rem;
 	}
 
+.speaker_name {
+top: 42.6%;
+}
+
 	.socials::after {
 		transform: translate(398px, 104.5px);
 		background-color: rgba(153, 110, 16, 0.771);
