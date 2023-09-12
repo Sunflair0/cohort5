@@ -11,10 +11,6 @@
 </head>
 
 <body>
-	<input type="checkbox" id="mobile-trigger" />
-	<label id="mobile-menu" for="mobile-trigger">
-		<i class="fas fa-bars"></i>
-	</label>
 	<header style="box-shadow: none;">
 		<div class="logo_head">
 			<a href="https://aiminstitute.org/" target="_blank" rel="noopener noreferrer">
@@ -32,40 +28,46 @@
 				</svg>
 			</a>
 		</div>
-		<nav>
-			<ul>
-				<li>
-					<a style="color:var(--primary_link);" href="index.html">
-						HOME
-					</a>
-				</li>
-				<li>
-					<a href="projects.html">
-						projects
-					</a>
-				</li>
-				<li>
-					<a href="fieldtrips.html">
-						fieldtrips
-					</a>
-				</li>
-				<li>
-					<a href="concepts.html">
-						concepts
-					</a>
-				</li>
-				<li>
-					<a href="speakers.html">
-						speakers
-					</a>
-				</li>
-				<li>
-					<a href="about.html">
-						about
-					</a>
-				</li>
-			</ul>
-		</nav>
+			<div class="mobile_box">
+				<div class="bar_a"></div>
+				<div class="bar_b"></div>
+				<div class="bar_c"></div>
+			</div>
+			<nav id="mobile_nav">
+				<ul class="mobile_menu">
+					<li>
+						<a style="color:var(--primary_link);" href="index.html">
+							HOME
+						</a>
+					</li>
+					<li>
+						<a href="projects.html">
+							projects
+						</a>
+					</li>
+					<li>
+						<a href="fieldtrips.html">
+							fieldtrips
+						</a>
+					</li>
+					<li>
+						<a href="concepts.html">
+							concepts
+						</a>
+					</li>
+					<li>
+						<a href="speakers.html">
+							speakers
+						</a>
+					</li>
+					<li>
+						<a href="about.html">
+							about
+						</a>
+					</li>
+				</ul>
+
+			</nav>
 	</header>
 	<div class="home">
 		<div class="watermark">Code Camp June 2023</div>
@@ -212,11 +214,11 @@
 			</div>
 		</div>
 	</div>
-	</div>
 	<footer>
 		&copy; Copyright 2023
 	</footer>
 
+	<script src="https://cdn.js.cloudefare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 	<script src="main.js"></script>
 
 </body>

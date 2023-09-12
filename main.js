@@ -1,3 +1,42 @@
+const menu_x = document.querySelector(".mobile_box");
+const barA = document.querySelector(".bar_a");
+const barB = document.querySelector(".bar_b");
+const barC = document.querySelector(".bar_c");
+const menu = document.querySelector(".mobile_menu");
+const nav = document.querySelector("nav");
+
+let flag = false;
+
+if (menu_x) {
+
+	menu_x.addEventListener('click', barToggle);
+
+}
+
+function barToggle() {
+	if (!flag) {
+		barA.style.transform = "translateY(7.8px) rotate(45deg)";
+		barB.style.transform = "translateX(16px)";
+		barB.style.width = "0";
+		barC.style.transform = "translateY(-7.8px) rotate(-45deg)";
+		nav.style.display = "flex";
+		menu.style.height = "300px";
+
+		flag = true;
+
+	} else {
+
+		barA.style.transform = "initial";
+		barB.style.transform = "initial";
+		barB.style.width = "24px";
+		barC.style.transform = "initial";
+		nav.style.display = "none";
+		menu.style.height = "initial";
+
+		flag = false;
+	}
+}
+
 // playVideo to desend video and play,
 // retractVideo to restrict eventlistener to just video container 
 //and teapot illusion link
