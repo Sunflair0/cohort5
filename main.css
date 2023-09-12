@@ -80,6 +80,23 @@ body::-webkit-scrollbar {
 	width: 0px;
 }
 
+mobile-menu:target~nav {
+	display: flex;
+	flex-direction: column;
+	padding: 0.5em;
+}
+
+#mobile-menu,
+#mobile-trigger {
+	display: none;
+}
+
+#mobile-trigger:checked~nav {
+	display: flex;
+	flex-direction: column;
+	padding: 0.5em;
+}
+
 .btn_style {
 	font-family: 'Inter';
 }
@@ -1206,14 +1223,19 @@ b #webs {
 	width: 100vw;
 }
 
+.blur {
+	backdrop-filter: blur(2px);
+}
+
 .speaker_card {
 	display: flex;
 	position: relative;
 	flex-direction: row;
 	flex-wrap: wrap;
-	box-shadow: inset 10px -7px 2px rgba(2, 3, 67, 0.25),
+	box-shadow: inset 10px -7px 2px rgba(2, 12, 82, 0.21),
 		inset -7px 7px 2px rgba(28, 66, 73, 0.3),
 		7px -6px 2px rgba(29, 70, 79, 0.8),
+		3px -4px 4px rgba(5, 16, 224, 0.85),
 		7.5px -7px 1px var(--background1),
 		30px -25px 2px rgba(1, 1, 48, 0.3);
 	width: 240px;
@@ -1222,7 +1244,7 @@ b #webs {
 	margin: 5rem 1.5rem;
 	scale: 1;
 	justify-content: center;
-	background: linear-gradient(rgba(3, 200, 255, 0.65) 0%, rgba(207, 228, 227, 0.15) 75%);
+	background: linear-gradient(rgba(27, 206, 255, 0.425) 0%, rgba(39, 62, 59, 0.3) 65%);
 	border: var(--background1) 1px solid;
 }
 
@@ -1248,7 +1270,8 @@ b #webs {
 	/* TV screen */
 	box-shadow: inset 5px 5px 7px rgb(58, 69, 82),
 		inset -5px -5px 7px rgba(0, 0, 0, 0.35),
-		5px -5px 15px rgba(3, 119, 110, 0.7);
+		4px -2px 5px rgba(3, 119, 109, 0.5),
+		8px -5px 2px rgba(10, 0, 64, 0.5);
 	border: #9291a7 1px solid;
 }
 
@@ -1270,10 +1293,11 @@ b #webs {
 	height: 55%;
 	border-radius: 10px 10px 0 0;
 	border-bottom: var(--background1) 2px solid;
-	box-shadow: 0px 2px 1px #000000d6;
+	box-shadow: 0px 2px 1px #000000;
 	/*vertical line shadow*/
 	background: linear-gradient(90deg,
-			rgba(1, 16, 92, 0.459) 40%,
+			/*blue side*/
+			rgba(36, 3, 155, 0.241) 40%,
 			var(--background1) 40%,
 			var(--background1) 40.5%,
 			rgba(38, 32, 51, 0.667) 40.5%,
@@ -1285,7 +1309,7 @@ b #webs {
 	position: absolute;
 	margin: 2rem auto;
 	width: 10%;
-	box-shadow: 5px -5px 7px rgba(0, 0, 0, 0.7);
+	box-shadow: 8px -5px 2px rgba(20, 12, 63, 0.3);
 	filter: brightness(120%);
 	min-width: 120px;
 	aspect-ratio: 1/1;
@@ -1307,12 +1331,13 @@ b #webs {
 	width: 75%;
 	justify-content: center;
 	border: #fda839 1px solid;
-	background: hsla(206, 85%, 5%, 0.368);
+	background: hsla(207, 83%, 9%, 0.75);
 	font-size: large;
 	box-shadow: inset 5px 5px 1px rgba(0, 0, 0, 0.25),
-		inset -5px 0 1px rgba(0, 0, 0, 0.25);
+		inset -5px 0 1px rgba(0, 0, 0, 0.25),
+		8px -5px 2px rgba(10, 0, 64, 0.15);
 	text-shadow: 2px 2px 2px black;
-	top: 42.6%;
+	top: 43.2%;
 	text-align: center;
 }
 
@@ -1333,7 +1358,8 @@ b #webs {
 	top: 3%;
 	left: 0;
 	box-shadow: inset -1px 1px 2px rgb(51, 51, 51),
-		inset 2px 0 1px rgb(0, 0, 0);
+		inset 2px 0 1px rgb(0, 0, 0),
+		8px -3px 2px rgba(11, 7, 33, 0.15);
 	background: #fffef4;
 	border: var(--background1) 1px solid;
 	border-left: transparent 1px solid;
@@ -1358,7 +1384,7 @@ b #webs {
 	width: 2px;
 	rotate: 45deg;
 	transform: translate(413.5px, 106px);
-	background-color: rgba(111, 83, 23, 0.771);
+	background-color: rgba(203, 145, 21, 0.771);
 	box-shadow: 0px 0px 1px rgb(101, 93, 53);
 }
 
@@ -1395,8 +1421,6 @@ footer {
 	margin-right: 0;
 }
 
-
-
 .b {
 	display: flex;
 	position: relative;
@@ -1412,14 +1436,6 @@ footer {
 		font-size: 13.3px;
 	}
 
-	.speaker {
-		width: 50vw;
-	}
-
-	.speaker_card {
-		margin: 25rem 1.5rem;
-		scale: 2.2;
-	}
 
 	.about {
 		height: 155vh;
@@ -1455,6 +1471,23 @@ footer {
 	.about {
 		height: 155vh;
 	}
+}
+
+@media screen and (max-width: 620px) {
+
+	.speaker {
+		width: 50vw;
+	}
+
+	.speaker_card {
+		margin: 2rem 1.5rem;
+	}
+
+	.socials::after {
+		transform: translate(398px, 104.5px);
+		background-color: rgba(153, 110, 16, 0.771);
+	}
+
 }
 
 @media screen and (max-width: 850px) {
