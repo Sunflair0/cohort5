@@ -31,19 +31,16 @@
 	/* horizontal margin */
 	--f: calc(2*var(--s) + 4*var(--m) - 2*var(--vc) - 2px);
 
-
 	@media screen and (min-width: 1450px) {
 		--s: 200px;
 		--vc: 60px;
 		--m: 7px;
-
 	}
 
 	@media screen and (max-width: 850px) {
 		--s: 130px;
 		--vc: 30px;
 	}
-
 
 	@media screen and (max-width: 420px) {
 		--s: 90px;
@@ -80,14 +77,10 @@ body::-webkit-scrollbar {
 	width: 0px;
 }
 
-.mobile_box {
+.phone_view,
+.mobile_box,
+#mobile_trigger {
 	display: none;
-	position: absolute;
-	flex-direction: column;
-	padding: .75em;
-	top: 0;
-	right: 0%;
-	/* height: 50px; */
 }
 
 .bar_a,
@@ -99,7 +92,7 @@ body::-webkit-scrollbar {
 	width: 24px;
 	cursor: pointer;
 	background-color: rgb(218, 210, 200);
-	transition: .5s ease-in;
+	transition: .37s ease-in;
 }
 
 .btn_style {
@@ -134,10 +127,6 @@ header {
 	height: 100vh;
 	right: 0;
 	bottom: 0;
-}
-
-.phone_view {
-	display: none;
 }
 
 .logo_repeat {
@@ -223,12 +212,14 @@ svg {
 nav {
 	display: flex;
 	position: absolute;
+	align-items: center;
 	justify-content: space-around;
 	text-transform: uppercase;
-	font-size: clamp(0.5em, 2.5vw, 1.25em);
+	font-size: clamp(10px, 2.5vw, 22px);
 	right: 0;
-	width: 75%;
+	width: 80%;
 	height: 100%;
+	list-style: none;
 }
 
 nav a {
@@ -254,28 +245,9 @@ nav a:hover {
 	border-top: var(--active) solid .15em;
 }
 
-nav a:active {
-	color: var(--active);
-}
-
-ul {
-	display: flex;
-	position: absolute;
-	align-items: center;
-	justify-content: space-around;
-	right: 0;
-	width: 100%;
-	height: 100%;
-}
-
-.pre_home ul {
+.pre_home {
 	box-shadow: none;
 }
-
-nav li {
-	list-style: none;
-}
-
 
 .hexa {
 	width: 230px;
@@ -1509,6 +1481,38 @@ footer {
 		display: none;
 	}
 
+
+	#mobile_trigger:not(:checked)~nav,
+	#mobile_trigger:checked~nav {
+		display: flex;
+		position: absolute;
+		flex-direction: column;
+		padding: .75em .2em;
+		top: calc(8vh + 3px);
+		width: 120px;
+		height: 300px;
+		background-color: hsla(0, 0%, 0%, 0.8);
+		border: var(--background1) 1px solid;
+		transition: .5s transform ease-in-out;
+	}
+
+	#mobile_trigger:not(:checked)~nav {
+		transform: translate(110%, 0);
+	}
+
+	#mobile_trigger:checked~nav {
+		transform: translate(0%, 0);
+	}
+
+	.mobile_box {
+		display: flex;
+		position: absolute;
+		flex-direction: column;
+		padding: .75em;
+		top: 0;
+		right: 0%;
+	}
+
 	.mobile_menu {
 		display: flex;
 		position: absolute;
@@ -1522,20 +1526,11 @@ footer {
 		border: var(--background1) 1px solid;
 	}
 
-	.menu_slide {
-		animation: slide .5s forwards;
-	}
-
 	@keyframes slide {
 		100% {
 			right: 0;
 		}
 	}
-
-	.mobile_box {
-		display: flex;
-	}
-
 }
 
 
