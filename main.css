@@ -275,7 +275,6 @@ nav a:hover {
 	direction: rtl;
 	filter: drop-shadow(0px 0px 3px rgb(220, 88, 17)) drop-shadow(0px 0px 1vh rgb(255, 143, 7));
 	/* disable white space between inline block element */
-
 }
 
 .honeycomb div {
@@ -288,7 +287,6 @@ nav a:hover {
 	clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
 	margin-bottom: calc(var(--m) - var(--s) * 0.2885);
 	filter: brightness(110%);
-
 }
 
 .honeycomb::before {
@@ -310,7 +308,6 @@ nav a:hover {
 	object-fit: cover;
 	animation: slideshow 24s calc(1s * var(--j)) linear infinite;
 }
-
 
 @keyframes slideshow {
 
@@ -677,10 +674,6 @@ a.dry_towel {
 	border-radius: 50%;
 	filter: url("#water");
 	z-index: 10;
-
-	/* @media screen and (max-height: 600px) {
-		height: clamp(3.5rem, 8vh + .1em, 5rem);
-	} */
 }
 
 .water2 {
@@ -719,7 +712,6 @@ a.dry_towel {
 	display: flex;
 	position: fixed;
 	height: 12vh;
-	/* bottom: 0; */
 }
 
 #plant {
@@ -909,7 +901,6 @@ a.dry_towel {
 		4px 4px 6px rgba(234, 220, 14, 0.6);
 
 	-webkit-text-stroke: 1px rgba(235, 221, 221, 0.23);
-	/* color: white; */
 	text-shadow:
 		3px 3px 0 #000,
 		-1px -1px 0 #000,
@@ -996,7 +987,6 @@ a.dry_towel {
 	background-position: center;
 }
 
-
 .imgBlock {
 	display: flex;
 	flex-direction: column;
@@ -1016,7 +1006,6 @@ a.dry_towel {
 .outline_shadow {
 	filter: drop-shadow(12px 12px 2px black);
 }
-
 
 .pic1 {
 	background-image: url(assets/aimMez.jpg);
@@ -1423,32 +1412,11 @@ footer {
 	z-index: 10;
 }
 
-.ab_pic {
-	display: block;
-	position: relative;
-	background-size: contain;
-	margin-right: 0;
-}
-
-.b {
-	display: flex;
-	position: relative;
-	height: 20%;
-	width: 80%;
-	padding: 5%;
-	background-color: #624723a0;
-}
-
 @media screen and (max-width: 420px) {
 
 	.tagline {
 		font-size: 13.3px;
 	}
-
-	/* .about,
-	.projects {
-		height: 155vh;
-	} */
 
 	.about .tagline {
 		font-size: 23px;
@@ -1475,7 +1443,6 @@ footer {
 	}
 
 }
-
 
 @media screen and (max-width: 500px) {
 	nav {
@@ -1509,11 +1476,8 @@ footer {
 		display: flex;
 		position: absolute;
 		flex-direction: column;
-		align-items: center;
-		padding: .75em;
-		right: 0;
-		top: 20%;
-
+		right: .75em;
+		top: 3vh;
 	}
 
 	.mobile_menu {
@@ -1538,13 +1502,14 @@ footer {
 
 
 @media only screen and (max-height: 721px) and (max-width: 541px) and (orientation: portrait) {
-.projects {
-    height: 112vh;}
+	.projects {
+		height: 112vh;
+	}
 }
 
 @media only screen and (max-height: 575.98px) and (orientation: landscape) {
 
-	.about{
+	.about {
 		height: 155vh;
 	}
 }

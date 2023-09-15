@@ -79,8 +79,8 @@ addBubbles = () => {
 }
 
 if (duck) {
-	
-duck.addEventListener("mouseover", addBubbles);
+
+	duck.addEventListener("mouseover", addBubbles);
 }
 delayBubbleFade = () => {
 	const bubbleStream = setTimeout(removeBubbles, 2400);
