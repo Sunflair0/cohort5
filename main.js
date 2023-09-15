@@ -2,21 +2,15 @@ const menu_x = document.querySelector(".mobile_box");
 const barA = document.querySelector(".bar_a");
 const barB = document.querySelector(".bar_b");
 const barC = document.querySelector(".bar_c");
+const trigger = document.querySelector("#mobile_trigger");
 
 let flag = false;
-console.log("start");
-console.log(flag);
 
-if (menu_x) {
-	menu_x.addEventListener('click', barAnimate);
-}
-
-function barAnimate() {
-
+barAnimate = () => {
 
 	if (!flag) {
 		barA.style.transform = "translateY(7.8px) rotate(45deg)";
-		barB.style.transform = "translateX(16px)";
+		barB.style.transform = "translateX(0px)";
 		barB.style.width = "0";
 		barC.style.transform = "translateY(-7.8px) rotate(-45deg)";
 
@@ -30,13 +24,12 @@ function barAnimate() {
 
 		flag = false;
 	}
+
 }
 
-
-function menuSlide() {
-	menu.classList.toggle("menu_slide");
+if (menu_x) {
+	menu_x.addEventListener('click', barAnimate);
 }
-
 
 // playVideo to desend video and play,
 // retractVideo to restrict eventlistener to just video container 
@@ -53,12 +46,12 @@ if (video) {
 	video.addEventListener('click', retractVideo)
 };
 
-function retractVideo() {
+retractVideo = () => {
 	video.style.transform = "translate(-50%,-200%)";
 	play = false;
 }
 
-function playVideo() {
+playVideo = () => {
 	if (!play) {
 		video.style.transform = "translate(-50%,-45%)";
 
@@ -72,17 +65,11 @@ const bubble = document.querySelectorAll(".bubble");
 const mbubble = document.querySelectorAll(".mbubble");
 const duck = document.querySelector("#duck_bubble_starter");
 
-if (duck) {
-	duck.addEventListener("mouseover", addBubbles);
-}
-
-function addBubbles() {
+addBubbles = () => {
 	bubble.forEach((bubble) => {
-		console.log(bubble);
 		bubble.classList.add('bubbles');
 	});
 	mbubble.forEach((bubble) => {
-		console.log(bubble);
 		bubble.classList.add('bubbles2');
 	});
 	if (duck) {
@@ -91,12 +78,16 @@ function addBubbles() {
 	}
 }
 
-function delayBubbleFade() {
+if (duck) {
+	
+duck.addEventListener("mouseover", addBubbles);
+}
+delayBubbleFade = () => {
 	const bubbleStream = setTimeout(removeBubbles, 2400);
 	return bubbleStream;
 }
 
-function removeBubbles(bubbleStream) {
+removeBubbles = (bubbleStream) => {
 	bubble.forEach((bubble) => {
 		bubble.classList.remove('bubbles');
 	});
@@ -111,17 +102,17 @@ function removeBubbles(bubbleStream) {
 	}
 }
 
-// meme pop up when wet towel is doubleclicked
+// meme pop up when wet towel is clicked
 
 const wet = document.querySelector("#wet");
 
-if (wet) {
-	wet.addEventListener('click', popMeme);
-}
-
-function popMeme() {
+popMeme = () => {
 	document.querySelector(".wet").style.opacity = "1";
 	setTimeout(() => {
 		document.querySelector(".wet").style.opacity = "0";
-	}, 3000);
+	}, 3200);
+}
+
+if (wet) {
+	wet.addEventListener('click', popMeme);
 }
