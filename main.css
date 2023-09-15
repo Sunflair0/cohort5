@@ -1395,6 +1395,27 @@ a.dry_towel {
 	color: var(--background1);
 }
 
+.cr {
+	display: flex;
+	position: relative;
+	right: 1em;
+	width: 13.5rem;
+	justify-content: space-between;
+}
+
+.cc {
+	display: flex;
+	font-family: 'Mulish', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-weight: 800;
+}
+
+.cclogo {
+	display: flex;
+	width: 18px;
+	height: 18px;
+	margin: 0 7px;
+}
+
 footer {
 	display: flex;
 	font-size: small;
