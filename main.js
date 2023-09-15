@@ -107,9 +107,9 @@ removeBubbles = (bubbleStream) => {
 const wet = document.querySelector("#wet");
 
 popMeme = () => {
-	document.querySelector(".wet").style.opacity = "1";
+	document.querySelector(".target_meme_pop").style.opacity = "1";
 	setTimeout(() => {
-		document.querySelector(".wet").style.opacity = "0";
+		document.querySelector(".target_meme_pop").style.opacity = "0";
 	}, 3200);
 }
 

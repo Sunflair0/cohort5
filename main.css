@@ -215,7 +215,7 @@ nav {
 	align-items: center;
 	justify-content: space-around;
 	text-transform: uppercase;
-	font-size: clamp(10px, 2.5vw, 22px);
+	font-size: clamp(10px, 2vw, 20px);
 	right: 0;
 	width: 80%;
 	height: 100%;
@@ -580,7 +580,7 @@ a.dry_towel {
 	cursor: pointer;
 }
 
-.wet {
+.target_meme_pop {
 	display: flex;
 	position: fixed;
 	background-image: url(assets/meme.png);
