@@ -1465,11 +1465,11 @@ footer {
 	}
 
 	#mobile_trigger:not(:checked)~nav {
-		transform: translate(110%, 0);
+		transform: translate(110%, .5px);
 	}
 
 	#mobile_trigger:checked~nav {
-		transform: translate(0%, 3.5px);
+		transform: translate(0%, .5px);
 	}
 
 	.mobile_box {
