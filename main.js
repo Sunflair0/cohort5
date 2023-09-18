@@ -35,16 +35,11 @@ if (menu_x) {
 // retractVideo to restrict eventlistener to just video container 
 //and teapot illusion link
 
+
+
 const vid = document.querySelector("#vid");
 const video = document.querySelector(".video")
 let play = false;
-
-if (vid) {
-	vid.addEventListener('click', playVideo);
-}
-if (video) {
-	video.addEventListener('click', retractVideo)
-};
 
 retractVideo = () => {
 	video.style.transform = "translate(-50%,-200%)";
@@ -60,6 +55,15 @@ playVideo = () => {
 		retractVideo()
 	}
 }
+
+if (vid) {
+	vid.addEventListener('click', playVideo);
+}
+if (video) {
+	video.addEventListener('click', retractVideo)
+};
+
+
 
 const bubble = document.querySelectorAll(".bubble");
 const mbubble = document.querySelectorAll(".mbubble");
