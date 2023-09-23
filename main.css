@@ -103,6 +103,7 @@ header {
 	display: flex;
 	position: fixed;
 	align-items: center;
+	top: 0;
 	width: 100%;
 	height: 9vh;
 	margin-top: 0;
@@ -914,8 +915,11 @@ a.dry_towel {
 .trip {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	max-width: 100%;
 	line-height: 1.5;
 	font-size: clamp(12px, 1.4vh, 16px);
+	overflow-x: hidden;
 }
 
 .trip p,
@@ -927,7 +931,7 @@ a.dry_towel {
 
 .trip_box {
 	display: flex;
-	position: relative;
+	/* position: absolute; */
 	margin: 15vh 0;
 	padding: 20px;
 	width: calc(100% - 20px);
@@ -1522,7 +1526,7 @@ footer {
 	}
 }
 
-@media screen and (max-width: 720px) and (min-height: 750px) {
+@media screen and (max-width: 720px) {
 
 	.img3_box {
 		width: 90vw;
@@ -1541,7 +1545,7 @@ footer {
 
 	#tw {
 		width: 100%;
-margin-top: 60vh;
+		margin-top: 60vh;
 	}
 
 	.pic2a {
