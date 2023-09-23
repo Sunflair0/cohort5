@@ -474,11 +474,14 @@ nav a:hover {
 }
 
 .projects,
-.concepts,
 .trip,
-.speakers,
 .about {
-	margin-top: 15vh;
+	margin: 15vh 10px 0;
+}
+
+.concepts,
+.speakers {
+	margin: 15vh 0 0;
 }
 
 .projects p,
@@ -663,7 +666,6 @@ a.dry_towel {
 	width: calc(100% - 30px);
 	height: clamp(3.5rem, 8vh + .1em, 5rem);
 	bottom: 0vh;
-	left: -.5rem;
 	background: repeating-linear-gradient(0deg,
 			rgb(1, 5, 7) 35%,
 			rgba(10, 1, 63, 0.85) 50%,
@@ -686,7 +688,7 @@ a.dry_towel {
 	border-radius: 50px;
 	border-right: 3px solid transparent;
 	bottom: 1vh;
-	left: 0px;
+	/* left: 0px; */
 	background: repeating-linear-gradient(0deg,
 			rgba(3, 51, 75, 0.275) 0%,
 			rgba(13, 108, 156, 0.393) 35%,
@@ -713,6 +715,7 @@ a.dry_towel {
 #bath {
 	display: flex;
 	position: fixed;
+	width: 103%;
 	height: 12vh;
 }
 
@@ -777,6 +780,10 @@ a.dry_towel {
 	margin: 14vh auto 0;
 	width: 95%;
 	transition: .15s ease;
+
+	@media screen and (max-width: 850px) {
+		margin: 5vh auto 0;
+	}
 }
 
 .websites button {
@@ -916,7 +923,8 @@ a.dry_towel {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	max-width: 100%;
+	justify-content: center;
+	max-width: calc(100% - 30px);
 	line-height: 1.5;
 	font-size: clamp(12px, 1.4vh, 16px);
 	overflow-x: hidden;
@@ -930,11 +938,15 @@ a.dry_towel {
 }
 
 .trip_box {
-	display: flex;
-	/* position: absolute; */
 	margin: 15vh 0;
 	padding: 20px;
-	width: calc(100% - 20px);
+	width: calc(100% - 40px);
+
+	@media screen and (max-width: 875px) {
+		flex-direction: column;
+		align-items: center;
+		margin: 10vh 0;
+	}
 }
 
 .trip_box p {
@@ -954,16 +966,26 @@ a.dry_towel {
 	color: aqua;
 }
 
-.trip_box button {
-	background-color: transparent;
-	color: var(--primary_link);
-	border: none;
-	font-size: 16px;
+.trip button {
+	display: inline;
 	position: relative;
+	justify-items: center;
+	align-items: center;
+	background-color: rgba(0, 0, 255, 0.30);
+	border: 2px solid white;
+	border-radius: 10px;
+	padding: 2px 5px;
+	color: white;
+	font-size: 16px;
+	margin: auto;
+	max-width: 88px;
+	width: max-content;
+	height: 60px;
 	bottom: -1px;
 	cursor: pointer;
-	z-index: 0;
+	z-index: 200;
 }
+
 
 .video {
 	position: fixed;
@@ -977,12 +999,11 @@ a.dry_towel {
 }
 
 .inset_shadow {
+	display: flex;
 	position: relative;
 	border-radius: 30px;
 	border: 1px solid var(--inset_border);
 	margin: 0 15px 50px;
-	display: flex;
-	position: relative;
 	padding: 0;
 	box-shadow: 14px 18px 5px rgba(39, 2, 2, 0.732),
 		0px 18px 25px 10px rgba(27, 1, 1, 0.65) inset,
@@ -1001,9 +1022,9 @@ a.dry_towel {
 .imgBlock {
 	display: flex;
 	flex-direction: column;
+	width: 90%;
 	text-shadow: 4px 4px 2px black;
 	color: var(--background1);
-	padding: 2em;
 }
 
 .pic1 {
@@ -1016,7 +1037,9 @@ a.dry_towel {
 
 }
 
-#tw {
+#para_graph {
+	display: block;
+	margin-left: 0;
 	width: 50%;
 }
 
@@ -1026,7 +1049,7 @@ a.dry_towel {
 	width: 100%;
 	max-width: 500px;
 	margin-bottom: 5vh;
-	rotate: 12deg;
+	rotate: 16deg;
 	aspect-ratio: 3/2;
 }
 
@@ -1037,6 +1060,12 @@ a.dry_towel {
 	height: 15rem;
 	width: clamp(262px, 60vw, 340px);
 	rotate: -5deg;
+
+	@media screen and (max-width: 875px) {
+		left: 0;
+		position: relative;
+		margin: 5rem 0 2rem;
+	}
 }
 
 .pic3 {
@@ -1060,27 +1089,28 @@ a.dry_towel {
 .pic3b,
 .pic3c {
 	max-width: 200px;
-	height: 11rem;
-	height: clamp(5rem, 18vw, 11rem);
+	height: clamp(6.5rem, 18vw, 11rem);
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 .pic3a {
 	background-image: url(assets/KanekoStudySpace.jpg);
-	rotate: -3deg;
+	rotate: 16deg;
 	aspect-ratio: 117/89;
+	transform: translate(-57px, -130px);
 }
 
 .pic3b {
 	background-image: url(assets/cpl.jpg);
-	rotate: 3deg;
+	rotate: -6deg;
 	aspect-ratio: 117/89;
+	transform: translate(-10px, -60px);
 }
 
 .pic3c {
 	background-image: url(assets/organ.jpg);
-	rotate: -4deg;
+	rotate: -10deg;
 	aspect-ratio: 3/2;
 }
 
@@ -1430,8 +1460,10 @@ footer {
 		font-size: 13.3px;
 	}
 
+	.trip .tagline,
+	.speakers .tagline,
 	.about .tagline {
-		font-size: 23px;
+		font-size: 24px;
 	}
 
 	.phone_view {
@@ -1527,43 +1559,52 @@ footer {
 }
 
 @media screen and (max-width: 720px) {
+	.trip_box p {
+		padding: 50px 30px 0;
+	}
 
 	.img3_box {
 		width: 90vw;
+		flex-wrap: wrap;
 	}
 
 	.pic1,
-	.pic2,
 	.pic3,
 	.pic4 {
+		display: flex;
+		justify-content: center;
 		rotate: 0deg;
-		width: clamp(310px, 120%, 400px);
-		margin-bottom: 0;
-		width: 100%;
+margin: 0 auto;
+		width: calc(100% - 30px);
 		height: 60vh;
 	}
 
-	#tw {
+
+	.pic2 {
+		rotate: 0deg;
+		width: 105%;
+		height: 45vh;
+	}
+
+	.pic3b {
+		transform: translate(-10px, -10px);
+	}
+
+	.trip_box {
+		padding: 0;
+	}
+
+	#para_graph {
 		width: 100%;
 		margin-top: 60vh;
 	}
 
-	.pic2a {
-		left: 35%;
-	}
-
-	.imgBlock h4 {
-		text-align: right;
+	.imgBlock h3 {
+		text-align: left;
 	}
 
 	.inset_shadow {
 		border-radius: 16px;
-	}
-
-	.trip_box {
-		flex-direction: column;
-		align-items: center;
-		margin: 10vh 0;
 	}
 
 	.duck {
@@ -1610,13 +1651,6 @@ footer {
 		background-color: rgba(153, 110, 16, 0.771);
 	}
 
-}
-
-@media screen and (max-width: 850px) {
-
-	.websites {
-		margin: 5vh auto 0;
-	}
 }
 
 

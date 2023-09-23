@@ -39,30 +39,51 @@ if (menu_x) {
 
 const vid = document.querySelector("#vid");
 const video = document.querySelector(".video")
+const btn = document.querySelector(".trip_box button")
+const trip = document.querySelector(".trip")
+const back = document.querySelector("ll")
+
 let play = false;
 
 retractVideo = () => {
 	video.style.transform = "translate(-50%,-200%)";
+	btn.innerHTML = "teapot illusion";
+	btn.style.position = "relative";
+	btn.style.top = "initial";
+	btn.style.left = "initial";
+	btn.style.height = "initial";
+	btn.style.display = "initial";
+	btn.style.width = "initial";
+
+
 	play = false;
 }
 
 playVideo = () => {
 	if (!play) {
 		video.style.transform = "translate(-50%,-45%)";
+		btn.innerHTML = "RETRACT";
+		btn.style.position = "fixed";
+		btn.style.top = "-50%";
+		btn.style.left = "25%";
+		btn.style.height = "30px";
+		btn.style.display = "flex";
+		btn.style.inset = "-60% 0 0";
 
 		play = true;
 	} else {
-		retractVideo()
+		retractVideo();
 	}
 }
 
 if (vid) {
 	vid.addEventListener('click', playVideo);
+
 }
 if (video) {
-	video.addEventListener('click', retractVideo)
+	video.addEventListener('click', retractVideo);
+	vid.classList.remove('see_btn');
 };
-
 
 
 const bubble = document.querySelectorAll(".bubble");
