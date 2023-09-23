@@ -918,29 +918,29 @@ a.dry_towel {
 	font-size: clamp(12px, 1.4vh, 16px);
 }
 
-.trip p {
+.trip p,
+.trip h2 {
 	font-weight: 800;
 	color: var(--background1);
-	text-shadow: 2px 2px 2px black;
+	text-shadow: 3px 3px 2px black;
 }
 
 .trip_box {
 	display: flex;
+	position: relative;
 	margin: 15vh 0;
 	padding: 20px;
-	width: 100%;
-justify-content: center;
-	/* border: 2px solid white; */
+	width: calc(100% - 20px);
 }
 
 .trip_box p {
-	display: block;
-	padding: 5% 20px;
-	align-items: center;
-	width: 40%;
+	width: 100%;
+	font-size: clamp(16px, 2vw, 30px);
+	padding: 50px 50px 0;
+	margin: auto 0;
 }
 
-.trip_box a:link {
+.trip_box a {
 	font-weight: 400;
 	text-decoration: none;
 	color: var(--primary_link);
@@ -961,16 +961,8 @@ justify-content: center;
 	z-index: 0;
 }
 
-.imgBlock h4 {
-	color: var(--background1);
-	padding: 1em;
-	inset: auto;
-	margin: auto;
-}
-
 .video {
 	position: fixed;
-	float: clear;
 	max-height: 550px;
 	justify-content: center;
 	top: 50%;
@@ -981,16 +973,16 @@ justify-content: center;
 }
 
 .inset_shadow {
+	position: relative;
 	border-radius: 30px;
 	border: 1px solid var(--inset_border);
-	margin: 0 15px;
+	margin: 0 15px 50px;
 	display: flex;
 	position: relative;
-	margin: 0 -15px;
 	padding: 0;
-	box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.85),
-		0px 8px 25px 10px rgba(27, 1, 1, 0.65) inset,
-		0px -8px 20px 10px rgba(27, 1, 1, 0.65) inset;
+	box-shadow: 14px 18px 5px rgba(39, 2, 2, 0.732),
+		0px 18px 25px 10px rgba(27, 1, 1, 0.65) inset,
+		0px -18px 20px 10px rgba(27, 1, 1, 0.65) inset;
 	background-size: cover;
 	background-position: center;
 }
@@ -1005,57 +997,42 @@ justify-content: center;
 .imgBlock {
 	display: flex;
 	flex-direction: column;
-	margin: 20px;
-	width: 50%;
-	float: right;
+	text-shadow: 4px 4px 2px black;
+	color: var(--background1);
+	padding: 2em;
 }
 
 .pic1 {
 	background-image: url(assets/aimMez.jpg);
-	height: 20rem;
+	position: absolute;
+	right: 0;
+	height: clamp(35vh, 43vw, 70vh);
 	aspect-ratio: 1;
-	float: left;
-	margin: 20px auto;
+	max-width: 600px;
+
+}
+
+#tw {
+	width: 50%;
 }
 
 .pic2 {
 	background-image: url(assets/lum.jpg);
-	height: 15rem;
-	max-width: 400px;
-	position: relative;
+	height: clamp(35vh, 31vw, 430vh);
+	width: 100%;
+	max-width: 500px;
+	margin-bottom: 5vh;
 	rotate: 12deg;
 	aspect-ratio: 3/2;
 }
 
 .pic2a {
 	background-image: url(assets/game.jpg);
-	background-position: left;
+	background-position: left 28%;
+	margin: 12rem 0 2rem;
 	height: 15rem;
-	max-width: 340px;
-	min-width: 262px;
-	float: left;
-	width: 60%;
+	width: clamp(262px, 60vw, 340px);
 	rotate: -5deg;
-	z-index: -1;
-}
-
-.pic3_box {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	width: 90%;
-}
-
-.pic3_box p {
-padding: 20px 0;
-width: 100%;
-}
-
-.pic4_box {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	width: 90%;
 }
 
 .pic3 {
@@ -1063,55 +1040,56 @@ width: 100%;
 	background-image: url(assets/uno.png);
 	background-size: cover;
 	margin: auto;
-	height: 35vh;
+	height: clamp(35vh, 40vw, 64vh);
 	width: 100%;
-	max-width: 500px;
+	max-width: 700px;
 }
 
 .img3_box {
 	display: flex;
-	margin: 6rem 0rem 0rem;
-	width: 100%;
+	margin: 12rem auto 0rem;
+	width: clamp(700px, 90vw, 900px);
 	justify-content: space-between;
+}
+
+.pic3a,
+.pic3b,
+.pic3c {
+	max-width: 200px;
+	height: 11rem;
+	height: clamp(5rem, 18vw, 11rem);
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .pic3a {
 	background-image: url(assets/KanekoStudySpace.jpg);
-	max-width: 200px;
-	height: 11rem;
-	height: clamp(7rem, 13vw, 11rem);
 	rotate: -3deg;
-	background-size: cover;
-	background-repeat: no-repeat;
 	aspect-ratio: 117/89;
 }
 
 .pic3b {
 	background-image: url(assets/cpl.jpg);
-	max-width: 200px;
-	height: clamp(7rem, 13vw, 11rem);
 	rotate: 3deg;
-	background-size: cover;
-	background-repeat: no-repeat;
 	aspect-ratio: 117/89;
 }
 
 .pic3c {
 	background-image: url(assets/organ.jpg);
-	max-width: 200px;
-	height: clamp(7rem, 13vw, 11rem);
 	rotate: -4deg;
-	background-size: cover;
-	background-repeat: no-repeat;
 	aspect-ratio: 3/2;
+}
+
+.trip h2 {
+	text-align: center;
 }
 
 .pic4 {
 	background-image: url(assets/geokey.jpg);
+	background-position: center 68%;
 	rotate: -5deg;
-	height: 20rem;
+	height: 18rem;
 	aspect-ratio: 1;
-	float: left;
 	margin: 20px auto;
 }
 
@@ -1544,7 +1522,45 @@ footer {
 	}
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 720px) and (min-height: 750px) {
+
+	.img3_box {
+		width: 90vw;
+	}
+
+	.pic1,
+	.pic2,
+	.pic3,
+	.pic4 {
+		rotate: 0deg;
+		width: clamp(310px, 120%, 400px);
+		margin-bottom: 0;
+		width: 100%;
+		height: 60vh;
+	}
+
+	#tw {
+		width: 100%;
+margin-top: 60vh;
+	}
+
+	.pic2a {
+		left: 35%;
+	}
+
+	.imgBlock h4 {
+		text-align: right;
+	}
+
+	.inset_shadow {
+		border-radius: 16px;
+	}
+
+	.trip_box {
+		flex-direction: column;
+		align-items: center;
+		margin: 10vh 0;
+	}
 
 	.duck {
 		bottom: 3.5vh;
