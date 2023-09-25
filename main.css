@@ -474,9 +474,12 @@ nav a:hover {
 }
 
 .projects,
-.trip,
-.about {
+.trip {
 	margin: 15vh 10px 0;
+}
+
+.about {
+	margin: 15vh 10px;
 }
 
 .concepts,
@@ -1055,7 +1058,7 @@ a.dry_towel {
 	background-image: url(assets/aimMez.jpg);
 	position: absolute;
 	right: 0;
-	margin-top: 25vh;
+	margin-top: 10vh;
 	height: clamp(35vh, 43vw, 70vh);
 	aspect-ratio: 1;
 	max-width: 600px;
@@ -1610,6 +1613,7 @@ footer {
 
 	.pic1 {
 		margin-top: 6vh;
+		background-size: contain;
 	}
 
 	.pic2 {
