@@ -1098,7 +1098,7 @@ a.dry_towel {
 
 .pic3 {
 	display: flex;
-	background-image: url(assets/uno2.png);
+	background-image: url(assets/uno.png);
 	background-size: cover;
 	margin: auto;
 	height: clamp(35vh, 40vw, 64vh);
@@ -1166,7 +1166,7 @@ a.dry_towel {
 	text-shadow: #000000 4px 2px 2px,
 		#000000 0px 0px 10px;
 	margin: 4vh 3rem 0;
-	font-size: clamp(12px, 3.2vh, 30px);
+	font-size: clamp(12px, 2.3vh, 30px);
 	font-weight: 400;
 	font-style: italic;
 	line-height: 1.33;
