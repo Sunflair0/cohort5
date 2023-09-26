@@ -1098,7 +1098,7 @@ a.dry_towel {
 
 .pic3 {
 	display: flex;
-	background-image: url(assets/uno.png);
+	background-image: url(assets/uno2.png);
 	background-size: cover;
 	margin: auto;
 	height: clamp(35vh, 40vw, 64vh);
