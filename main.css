@@ -235,7 +235,8 @@ nav a:link {
 	text-decoration: none;
 }
 
-nav a:visited {
+nav a:visited,
+.cc a:visited {
 	color: var(--secondary_color);
 }
 
@@ -1448,42 +1449,63 @@ a.dry_towel {
 	color: var(--background1);
 }
 
-.cr {
-	display: flex;
-	position: relative;
-	right: 1em;
-	width: 13.5rem;
-	justify-content: space-between;
+.google {
+	margin-top: .5em;
 }
 
+.next a:link,
+.next a:visited {
+	position: relative;
+	color: rgb(128, 127, 127);
+	font-weight: 500;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+div>span {
+	position: relative;
+	top: 1px;
+}
+
+
 .cc {
-	display: flex;
 	font-family: 'Mulish', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 	font-weight: 800;
+	color: var(--background1);
+}
+
+.cc>a {
+	text-decoration: none;
+}
+
+.cc>a:hover,
+.next a:hover {
+	color: var(--third_color);
 }
 
 .cclogo {
-	display: flex;
-	width: 18px;
-	height: 18px;
-	margin: 0 7px;
+	width: fit-content;
+	height: 1em;
 }
 
 footer {
 	display: flex;
-	font-size: small;
+	font-size: medium;
 	position: fixed;
 	color: var(--secondary_color);
 	align-items: center;
-	justify-content: end;
-	padding: .2rem .5rem;
-	height: 2em;
+	justify-content: space-around;
+	height: 7vh;
 	width: 100%;
 	background-color: rgb(0, 0, 0);
 	border-top: var(--background1) 1px solid;
-	border-bottom: 4px solid black;
 	bottom: 0;
 	z-index: 1000;
+}
+
+footer>* {
+	transition: .3s all;
 }
 
 @media screen and (max-width: 420px) {
